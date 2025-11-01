@@ -1,0 +1,25 @@
+state={
+	id=696
+	name="STATE_696"
+	manpower=37500
+	state_category = small_island
+
+	history={
+		owner = USS
+		victory_points = {
+			13010 1
+		}
+		buildings = {
+			infrastructure = 1
+			13010 = {
+				naval_base = 1
+			}
+		}
+	}
+	
+	provinces={
+		13010 
+	}
+
+	local_supplies=0.0 
+}

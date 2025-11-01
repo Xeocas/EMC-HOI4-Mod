@@ -1,0 +1,38 @@
+
+state={
+	id=133
+	name="STATE_133" # Lanark
+	manpower = 500000
+	
+	state_category = town
+	
+	resources={
+		steel=21
+	}
+
+	history={
+		add_core_of = SCO
+		owner = NSR
+		victory_points = {
+			3273 5
+		}
+		victory_points = {
+			11218 1 #Dumfries
+		}
+		buildings = {
+			infrastructure = 2
+			6395 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = GBR
+		add_core_of = NSR
+	}
+
+	provinces={
+		3273 6320 6350 6385 6395 9237 9350 11218 
+	}
+
+	local_supplies=0.0 
+}

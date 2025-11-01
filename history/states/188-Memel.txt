@@ -1,0 +1,29 @@
+state = {
+	id = 188
+	name = "STATE_188"
+	manpower = 144000
+	
+	state_category = rural
+	
+	history = {
+		owner = ALA
+		add_core_of = LIT
+		add_claim_by = BAL
+
+		victory_points = {
+			3288 3 # Klaipeda/Memel
+		}
+		
+		buildings = {
+			infrastructure = 2
+			3288 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces = {
+		3288 	
+	}
+	local_supplies = 0.0 
+}

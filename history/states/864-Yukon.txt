@@ -1,0 +1,21 @@
+state={
+	id=864
+	name="STATE_864"
+	provinces={
+		3606 7869 7891 
+	}
+	history = {
+		buildings = {
+			infrastructure = 1
+		}
+		owner = YUK
+		add_core_of = YUK
+		victory_points = {
+			7869 5 
+		}
+	}
+	manpower=2850000
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

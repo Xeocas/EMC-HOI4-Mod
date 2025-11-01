@@ -1,0 +1,107 @@
+ideas = {
+
+	country = {
+		eden_of_democracy = {
+			picture = eden_of_democracy
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.3
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		the_frontier = {
+			picture = the_frontier
+			
+			allowed = {
+				tag = CAS
+				tag = FRO
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conservative_democrat_drift = 0.05
+				cavalry_attack_factor = 0.1
+			}
+		}
+
+		jeffcadia = {
+			picture = jeffcadia
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				social_democrat_drift = 0.05
+				political_power_gain = 0.05
+				stability_factor = -.10
+			}
+		}
+
+		ineffective_national_guard = {
+			picture = ineffective_national_guard
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.1
+				conscription_factor = -0.1
+				experience_gain_army_factor = -0.2
+			}
+		}
+	}
+}

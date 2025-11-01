@@ -1,0 +1,14 @@
+spriteTypes = {	
+
+	## CASCADIA ##
+	
+	spriteType = {
+		name = "CAS_setrus_admin"
+		texturefile = "gfx/interface/goals/focus_CAS_the_setrus_administration.tga"
+	}
+	spriteType = {
+		name = "CAS_hockey"
+		texturefile = "gfx/interface/goals/focus_CAS_sports_act.png"
+	}
+
+}

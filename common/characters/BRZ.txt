@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	BRZ_olivio = {
+		name = BRZ_LEADER_olivio
+		portraits = {
+			civilian = {
+				large = GFX_portrait_BRZ_olivio_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

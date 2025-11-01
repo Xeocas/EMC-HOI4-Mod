@@ -1,0 +1,40 @@
+state={
+	id=126
+	name="STATE_126"
+	manpower=320000
+	
+	state_category = megalopolis
+
+	history={
+		owner = EGL
+
+		victory_points = {
+			6103 50 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 10
+			11374 = {
+				naval_base = 10
+			}
+			6103 = { 
+			    landmark_big_ben = {
+			        allowed = {
+			            has_dlc = "Gotterdammerung"
+			        }
+			        level = 1
+			    }
+			}
+		}
+		add_core_of = EGL
+		add_core_of = GBR
+		add_core_of = NSR
+	}
+
+	provinces={
+		6103 9239 11333 11374 
+	}
+
+	local_supplies=0.0 
+}

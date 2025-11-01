@@ -1,0 +1,40 @@
+
+state={
+	id=29
+	name="STATE_29"
+	manpower = 1800000
+	
+	state_category = city
+	resources={
+		steel=24
+		aluminium=8
+	}
+
+	history={
+		owner = NTL
+		victory_points = {
+			575 5
+		}
+		victory_points = {
+			11483 10
+		}
+		victory_points = {
+			11548 15
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 5
+			575 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = FRC
+	}
+
+	provinces={
+		575 3476 3536 6504 9500 11483 11548 11606 
+	}
+
+	local_supplies=15.0 
+}

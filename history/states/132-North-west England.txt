@@ -1,0 +1,38 @@
+state= {
+	id=132
+	name="STATE_132" # Lancashire
+	manpower = 117000
+	
+	state_category = large_town
+	
+	resources={
+		steel=31
+		aluminium=2
+	}
+
+	history= {
+		owner = NSR
+		victory_points = {
+			6384 10 
+		}
+		victory_points = {
+			6318 5 
+		}
+		
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			6384 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = EGL
+		add_core_of = GBR
+		add_core_of = NSR
+	}
+	provinces= {
+		3205 6318 6335 6384
+ 	}
+
+	local_supplies=0.0 
+}

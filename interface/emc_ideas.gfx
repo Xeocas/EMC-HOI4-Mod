@@ -1,0 +1,19 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_eden_of_democracy"
+		texturefile = "gfx/interface/ideas/idea_CAS_eden_of_democracy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_the_frontier"
+		texturefile = "gfx/interface/ideas/idea_CAS_frontier.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_jeffcadia"
+		texturefile = "gfx/interface/ideas/idea_CAS_jeffcadia.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ineffective_national_guard"
+		texturefile = "gfx/interface/ideas/idea_CAS_ineffective_national_guard.dds"
+	}
+}

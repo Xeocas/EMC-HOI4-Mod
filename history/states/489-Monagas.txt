@@ -1,0 +1,35 @@
+
+state={
+	id=489
+	name="STATE_489" # Zulia
+	manpower = 1900000
+	
+	state_category = city
+	
+	resources={
+		oil=35 # was: 126
+	}
+
+	history={
+		owner = BRZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			1944 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = VZL
+		add_core_of = GRA
+		victory_points = {
+			1944 5 
+		}
+
+	}
+
+	provinces={
+		1944 1997 2052 4526 5088 10855 12772 
+	}
+
+	local_supplies=6.0 
+}

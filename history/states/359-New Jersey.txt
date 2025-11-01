@@ -1,0 +1,27 @@
+
+state={
+	id=359
+	name="STATE_359"
+	manpower = 540000
+	
+	state_category = large_town
+
+	history={
+		owner = NYC
+		victory_points = {
+			6882 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = NYC
+	}
+
+	provinces={
+		3693 3863 6882 9801 9864 11740 11782 11900 
+	}
+	
+
+	local_supplies=15.0 
+}

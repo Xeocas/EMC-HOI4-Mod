@@ -1,0 +1,38 @@
+state=
+{
+	id=319
+	name="STATE_319"
+	manpower = 1100000
+	
+	state_category = city
+	
+	resources={
+		chromium=1 # was: 1
+	}
+	history=
+	{
+		owner = TRO
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 5
+			7660 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = TRO
+		victory_points = {
+			7660 10 
+		}
+		victory_points = {
+			4598 1 
+		}
+
+	}
+	provinces={
+		4598 7632 7660 10484
+	}
+
+	local_supplies=0.0 
+}

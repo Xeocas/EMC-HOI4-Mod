@@ -1,0 +1,24 @@
+state={
+	id=675
+	name="STATE_675"
+	manpower = 80000
+	
+	state_category = wasteland
+
+	history={
+		owner = BAB
+		victory_points = {
+			12413 1 
+		}
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = BAB
+	}
+	
+	provinces = {
+		10744 12879 13368
+	}
+
+	local_supplies=0.0 
+}

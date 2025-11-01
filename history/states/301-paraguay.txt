@@ -1,0 +1,37 @@
+
+state = {
+	id = 301
+	name = "STATE_301"
+	manpower = 102000
+	
+	state_category = town
+	
+	history = {
+		owner = LAP
+		add_core_of = LAP
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			air_base = 5
+		}
+		
+		victory_points = {
+			2152 5 
+		}
+		victory_points = {
+			2194 2 
+		}
+		victory_points = {
+			11023 1
+		}
+
+	}
+
+	provinces = {
+		2152 2173 2194 11023 12901 
+	}
+	
+
+	local_supplies = 0.0 
+}

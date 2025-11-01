@@ -1,0 +1,43 @@
+state = {
+	id = 735
+	name = "STATE_735"
+
+	state_category = city
+
+	manpower = 1000000
+
+	history = {
+		owner = SAV
+		add_core_of = SAV
+		add_core_of = FRC
+
+		victory_points = {
+			778 15 # Annecy
+		}
+
+		victory_points = {
+			9909 5 # Nice
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 2
+			9909 = {
+				naval_base = 1
+			}	
+			# Tignes Dam
+			#9745 = { dam = 1 }
+
+		}
+
+	}
+
+	provinces = {
+		764 778 3764 3959 6609 6975 9603 9736 9745 9909 11573 
+	}
+	
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 0.0 
+}

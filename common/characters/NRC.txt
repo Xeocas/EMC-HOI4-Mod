@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	NRC_unbated = {
+		name = NRC_LEADER_unbated
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NRC_unbated_large
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

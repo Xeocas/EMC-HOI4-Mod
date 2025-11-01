@@ -1,0 +1,29 @@
+state={
+	id=1027
+	name="STATE_1027"
+
+	state_category = town
+	
+	resources={
+		oil=20
+	}
+
+	history={
+		owner = CAL
+		add_core_of = CAL
+		add_core_of = JEF
+		add_claim_by = CAS
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		9730 6757 6772 768 9697 766 11698 6745
+	}
+
+	manpower=400000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

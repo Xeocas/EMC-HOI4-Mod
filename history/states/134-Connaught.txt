@@ -1,0 +1,32 @@
+
+state=
+{
+	id=134
+	name="STATE_134"
+	manpower = 3600000
+	
+	state_category = metropolis
+
+	history= {
+		owner = NSR
+		victory_points = {
+			9303 10 #Galway
+		}
+		victory_points = {
+			11371 2 #Sligo
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		add_core_of = IRE
+		add_core_of = NSR
+	}
+
+	provinces=
+	{
+337 3396 9255 9303 9321 9369 11238 11287 11371 	}
+
+	local_supplies=13.0 
+}

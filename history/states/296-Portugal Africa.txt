@@ -1,0 +1,31 @@
+
+state={
+	id=296
+	name="STATE_296" # Guinea-Bissau
+	manpower = 229000
+	
+	state_category = rural
+	resources={
+		rubber=1
+	}
+	history={
+		owner = GNA
+		add_core_of = GNA
+		victory_points = {
+			12891 1
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			12891 ={
+				naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		12747 12891 
+	}
+
+	local_supplies=0.0 
+}

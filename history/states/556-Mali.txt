@@ -1,0 +1,27 @@
+
+state={
+	id=556
+	name="STATE_556"
+	manpower = 374000
+	state_category=rural
+
+	history={
+		owner = MLI
+		add_core_of = MLI
+		victory_points = {
+			4927 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		4927 5045 8116 12794 
+	}
+	buildings_max_level_factor=1.000
+	
+	local_supplies=2.000
+}

@@ -1,0 +1,25 @@
+
+state={
+	id=473
+	name="STATE_473"
+	manpower = 1100000
+	resources={
+		oil=1
+	}
+	
+	state_category = rural
+
+	history={
+		owner = CAS
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = CAS
+	}
+
+	provinces={
+		1323 1737 4870 10644 
+	}
+
+	local_supplies=4.0 
+}

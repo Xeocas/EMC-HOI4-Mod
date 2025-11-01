@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	HAV_drac = {
+		name = HAV_LEADER_drac
+		portraits = {
+			civilian = {
+				large = GFX_portrait_HAV_drac_large
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,36 @@
+
+state={
+	id=361
+	name="STATE_361"
+	manpower = 92000
+	
+	state_category = large_town
+
+	history={
+		owner = CSA
+		victory_points = {
+			3957 40 
+		}
+		victory_points = {
+			6984 5 
+		}
+		buildings = {
+			infrastructure = 1
+			6984 = {
+				naval_base = 1
+			}
+			3957 = {
+				naval_base = 1
+				naval_facility = 1
+			}
+		}
+		add_core_of = USS
+
+	}
+
+	provinces={
+		3957 6823 6892 6929 6984 9758 9786 11892 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=451
+	name="STATE_451"
+	manpower = 402000
+	
+	state_category = pastoral
+
+	history={
+		owner = EGY
+		
+		victory_points = {
+			1130 5 
+		}
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			air_base = 4
+			1130 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = EGY
+		add_core_of = TRI
+		add_claim_by = GRE
+	}
+
+	provinces={
+		1130 1204 4136 4151 7082 9992 10120 12094 
+	}
+
+	local_supplies=4.0 
+}

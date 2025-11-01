@@ -1,0 +1,37 @@
+state = {
+	id = 34
+	name = "STATE_34"
+	manpower = 3043170
+	resources={
+		steel=22
+	}
+
+	state_category = town
+
+	history = {
+		owner = NTL
+		add_core_of = BEL
+		add_core_of = NTL
+
+		victory_points = {
+			3516 5 # Namur
+		}
+		victory_points = {
+			11519 8 # Liege
+		}
+		victory_points = {
+			9536 3 # Charleroi
+		}
+
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+	}
+
+	provinces = {
+		3516 9536 11519 13081 
+	}
+
+	local_supplies = 14.0 
+}

@@ -1,0 +1,20 @@
+state={
+	id=873
+	name="STATE_873"
+	provinces={
+		2116 2221 5198 10941 12949 
+	}
+	history = {
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		owner = AST
+		add_core_of = AST
+	}
+	state_category = town
+	manpower=2300000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

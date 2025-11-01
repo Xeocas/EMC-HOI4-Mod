@@ -1,0 +1,34 @@
+state={
+	id=700
+	name="STATE_700"
+	manpower = 1700000
+	
+	state_category = city
+	resources = {
+		steel = 32
+	}
+	
+	history=
+	{
+		owner = GNA
+		add_core_of = GNA
+		victory_points = {
+			2038 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 2
+			2038 = {
+				naval_base = 3
+			}
+		}
+
+	}
+	
+	provinces={
+		2038 2094 
+	}
+
+	local_supplies=0.0 
+}

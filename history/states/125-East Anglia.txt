@@ -1,0 +1,41 @@
+state = {
+	id = 125
+	name = "STATE_125"
+	manpower = 1500000
+	
+	state_category = city
+
+	history = {
+		owner = NSR
+		add_core_of = EGL
+		add_core_of = GBR
+		add_core_of = NSR
+
+		victory_points = { 
+			271 2 # Ipswich
+		}
+
+		victory_points = { 
+			322 5 # Norwich
+		}
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			anti_air_building = 3
+			air_base = 10
+
+			271 = {
+				naval_base = 3
+			}
+
+		}
+		
+	}
+
+	provinces = {
+		221 271 296 322 3287 11221 11253 
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	NSR_spencer = {
+		name = NSR_LEADER_spencer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NSR_spencer_large
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

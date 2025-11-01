@@ -1,0 +1,36 @@
+state = {
+	id = 466
+	name = "STATE_466"
+	manpower = 5300000
+	resources = {
+		aluminium = 4.000
+	}
+
+	history = {
+		owner = LAU
+		add_core_of = LAU
+		add_core_of = QUE
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
+			3691 = {
+				naval_base = 1
+			}
+		}
+
+		victory_points = {
+			7364 20 
+		}
+
+	}
+
+	provinces = {
+		490 1712 3208 3691 6740 7364 7813 10176 12147 13162 13166 13181 13184 13186 13196 13314
+	}
+	
+	buildings_max_level_factor = 1.000
+	state_category = metropolis
+	local_supplies = 0.000
+}

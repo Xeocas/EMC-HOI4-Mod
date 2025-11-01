@@ -1,0 +1,29 @@
+state={
+	id=463
+	name="STATE_463"
+
+	history={
+		owner = YUK
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			13091 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ALK
+		victory_points = {
+			13091 5 
+		}
+
+	}
+
+	provinces={
+		4833 4848 10679 13069 13091 
+	}
+	manpower=900000
+	buildings_max_level_factor=1
+	state_category="rural"
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,58 @@
+CAS_balance_of_power = { 
+    initial_value = 0
+    left_side = CAS_ofn
+    right_side = CAS_nat
+    decision_category = CAS_bop_decision
+
+    range = { 
+        id = CAS_bop_range
+        min = -0.25
+        max = 0.25
+        modifier = { 
+            political_power_gain = 2
+        }
+    }
+    side = { 
+        id = CAS_ofn
+        icon = GFX_bop_ITA_mussolini_side
+        range = { 
+            id = CAS_left_half
+            min = -0.75
+            max = -0.25
+            modifier = { 
+                political_power_gain = 3
+            }
+        }
+        range = { 
+            id = CAS_left_full
+            min = -1
+            max = -0.75
+            modifier = { 
+                political_power_gain = 4
+            }
+
+        }
+    }
+    side = { 
+        id = CAS_nat
+        icon = GFX_bop_ITA_pope_improved_side
+        range = { 
+            id = CAS_right_half
+            min = 0.75
+            max = 0.25
+            modifier = { 
+                political_power_gain = 1
+            }
+        }
+        range = { 
+            id = CAS_right_full
+            min = 1
+            max = 0.75
+            modifier = { 
+                political_power_gain = 5
+            }
+
+        }
+        
+    }
+}

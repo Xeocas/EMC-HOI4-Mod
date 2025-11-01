@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	CHA_karn = {
+		name = CHA_LEADER_karn
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHA_karn_large
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

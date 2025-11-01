@@ -1,0 +1,40 @@
+state= {
+	id=315
+	name="STATE_315"
+	manpower = 4600000
+	resources={
+		steel=3 # was: 4
+		chromium=90 # was: 160
+	}
+	
+	state_category = city
+
+	history= {
+		owner = CBA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 3
+			air_base = 6
+			7622 = {
+				naval_base = 5
+			}
+			1550 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = CBA
+		victory_points = {
+			7622 20 
+		}
+		victory_points = {
+			7590 5
+		}
+
+	}
+	provinces={
+		1550 4476 4600 7451 7546 7590 7622 10374 10498 12347
+	}
+
+	local_supplies=0.0 
+}

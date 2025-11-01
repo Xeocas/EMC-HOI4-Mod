@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	LAU_masterewild = {
+		name = LAU_LEADER_masterewild
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LAU_masterewild_large
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

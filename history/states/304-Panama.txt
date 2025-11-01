@@ -1,0 +1,42 @@
+
+state={
+	id=304
+	name="STATE_304"
+	manpower = 5700000
+	resources={
+		oil=1 # was: 1
+	}
+	
+	state_category = large_city
+	
+	history={
+		owner = PAN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 3
+			industrial_complex = 2 
+			air_base = 3
+			7630 = {
+				naval_base = 5
+			}
+			4611 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = PAN
+		add_core_of = MSK
+		victory_points = {
+			7630 15 
+		}
+		victory_points = {
+			4611 3
+		}
+
+	}
+
+	provinces={
+		1633 4611 4624 7630 10482 
+	}
+
+	local_supplies=0.0 
+}

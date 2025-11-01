@@ -1,0 +1,30 @@
+
+state={
+	id=24
+	name="STATE_24"
+	manpower = 6200000
+	
+	state_category = metropolis
+
+	history={
+		owner = FRC
+		victory_points = {
+			3671 10
+		}
+		victory_points = {
+			512 30
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		add_core_of = FRC
+	}
+
+	provinces={
+		512 3493 3671 6518 6533 6688 9492 11611 11631 
+	}
+
+	local_supplies=15.0 
+}

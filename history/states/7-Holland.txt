@@ -1,0 +1,42 @@
+state={
+	id=7
+	name="STATE_7"
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = NTL
+		add_core_of = NTL
+		victory_points = {
+			391 25 
+		}
+		victory_points = {
+			3211 10 
+		}
+		victory_points = {
+			9498 20 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 1
+			air_base = 5
+			3314 = {
+				naval_base = 5
+			}
+			9498 = {
+				naval_base = 10
+			}
+		}
+	}
+
+	provinces={
+		68 391 3211 3314 9498 
+	}
+	manpower=188000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+
+	local_supplies=0.0 
+}

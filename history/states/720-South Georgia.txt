@@ -1,0 +1,32 @@
+state={
+	id=720
+	name="STATE_720"
+	manpower=8900000	
+	state_category = megalopolis
+	
+	history=
+	{
+		owner = PLR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 5
+			arms_factory = 4
+			air_base = 5
+			10995 = {
+				naval_base = 8
+			}
+		}
+
+		victory_points = {
+			10995 25 
+		}
+		
+		add_core_of = PLR
+	}
+	
+	provinces={
+		10995 
+	}
+
+	local_supplies=0.0 
+}

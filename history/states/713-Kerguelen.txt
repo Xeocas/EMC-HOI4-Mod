@@ -1,0 +1,29 @@
+state={
+	id=713
+	name="STATE_713"
+	manpower=3300000
+	state_category = city
+
+	history={
+		owner = PLR
+		add_core_of = PLR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 2
+			2165 = {
+				naval_base = 6
+			}
+		}
+
+		victory_points = {
+			2165 10 
+		}
+	}
+
+	provinces={
+		2165 
+	}
+
+	local_supplies=0.0 
+}

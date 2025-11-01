@@ -1,0 +1,28 @@
+state = {
+	id=931
+	name="STATE_931"
+	manpower = 315000
+	state_category = rural
+	resources = {
+		steel = 20 
+		aluminium = 5
+	}
+
+	history = {
+		owner = NSR
+		add_core_of = EGL
+		add_core_of = GBR
+		add_core_of = NSR
+		victory_points = {
+			11332 3 #Carlisle
+		}
+		buildings = {
+			infrastructure = 2 #was: 6
+		}
+	}
+
+	provinces = {
+		219 6399 9285 11332 
+	}
+	local_supplies = 0.000
+}

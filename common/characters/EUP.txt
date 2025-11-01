@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	EUP_rawr = {
+		name = EUP_LEADER_rawr
+		portraits = {
+			civilian = {
+				large = GFX_portrait_EUP_rawr_large
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

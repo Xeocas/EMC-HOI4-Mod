@@ -1,0 +1,34 @@
+state = {
+	id = 232
+	name = "STATE_232" #Dagestan
+	manpower = 1800000
+	
+	state_category = large_town
+	
+	resources = {
+		oil = 10
+	}
+
+	history = {
+		owner = CAU
+
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			6701 3 # Makhachkala
+		}
+		victory_points = {
+			7624 1 # Derbent
+		}
+
+		add_core_of = CAU
+		add_core_of = KHA
+	}
+
+	provinces = {
+		683 700 712 728 1450 3668 3682 3711 4463 6701 6730 6748 7554 7624 9645 11632 
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	ILI_lucas = {
+		name = ILI_LEADER_lucas
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ILI_lucas_large
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,39 @@
+﻿l_english:
+ emc_news.1.t:0 "Mexico Joins the NAU"
+ emc_news.1.d:0 "The nation of Mexico, led by 911Saph, has joined the North America Union."
+ emc_news.1.a:0 "The NAU expands further."
+ emc_news.1.b:0 "Much less to worry about now"
+ emc_news.1.c:0 "Welcome friends!"
+ emc_news.2.t:0 "Vermont Declares Independence"
+ emc_news.2.d:0 "The new nation of Vermont has declared independence from Laurentia, promising to continue their growth as a peaceful community on the American East Coast."
+ emc_news.2.a:0 "Welcome Vermont!"
+ emc_news.2.b:0 "Glory to Vermont!"
+ emc_news.2.c:0 "Welcome to the world Vermont"
+ emc_news.3.t:0 "Havaiki founded"
+ emc_news.3.d:0 "The nation of Havaiki has been founded in New Zealand. It is yet to be seen if this new nation can return activity to the southern islands."
+ emc_news.3.a:0 "Welcome Havaiki!"
+ emc_news.3.b:0 "Glory to Havaiki!"
+ 
+ cas.1.t:0 "Great North Icerail Crisis"
+ cas.1.d:0 "Several mayors in the Great North have risen up in opposition to the Icerail Preservation Act proposed by Secretary of Interior Moxie a few days ago. They claim that declaring icerails to be under the sole authority of the Department of Interior is unconstitutional, and a violation of their towns’ rights. Already, the towns of Sullivan Bay, Husky Valley, and Castle John have disconnected their towns from the icerail system and threatened to expand their resistance to the law."
+ cas.1.a:0 "Well that's annoying"
+
+ mex.1.t:0 "Offer to join NAU"
+ mex.1.d:0 "We have been offered the chance to join the North American Union by the USA. Although this may impede on our soverignty, it would greatly improve our current security situation and strengthen our alliances."
+ mex.1.a:0 "We will accept the offer"
+ mex.1.b:0 "Mexico remains independent!"
+
+ usa.1.t:0 "Mexico joins the NAU"
+ usa.1.d:0 "The nation of Mexico has agreed to join our North American Union"
+ usa.1.a:0 "The NAU grows stronger!"
+
+ lau.1.t:0 "Vermont Declares Independence"
+ lau.1.d:0 "The growing town of Vermont, led by Princeling, has declared it's independence. Their new diplomats have begun to reach out to us in the hopes of maintaining positive relations."
+ lau.1.a:0 "Let them be guided by our example"
+ lau.1.b:0 "Sepratism will not be tolerated"
+ lau.1.c:0 "Glory to Vermont!"
+
+ nzl.1.t:0 "Havaiki is founded"
+ nzl.1.d:0 "A wave of immigrants from another Earth server, MCPE, have settled on the North Island, founding the nation of Havaiki. With this being the first activity the islands have seen in some time, it's quite possible that this signals a new era for New Zealand."
+ nzl.1.a:0 "Glory to Havaiki!"
+ 

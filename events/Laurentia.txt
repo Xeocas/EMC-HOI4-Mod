@@ -1,0 +1,50 @@
+﻿###########################
+# Laurentia Events
+###########################
+
+add_namespace = lau
+
+# Vermont independence
+country_event = {
+	id = lau.1
+	title = lau.1.t
+	desc = lau.1.d
+	picture = GFX_report_event_AUS_political_rally
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = LAU
+        date > 2024.2.20
+		date < 2024.3.14
+	}
+
+	immediate = {
+		hidden_effect = {
+			news_event = { id = news.2 days = 2}
+		}
+		release = VER
+	}
+	
+	option = { # May Vermont be guided by our example
+		name = lau.1.a
+		ai_chance = { factor = 75 }
+	}
+	option = { # Sepratism will not be tolerated
+		name = lau.1.b
+		ai_chance = { factor = 25 }
+		add_war_support = 0.2
+		create_wargoal = {
+    		type = take_state_focus
+    		target = LAU
+    		generator = { 1036 }
+    		expire = 90
+		}
+	}
+	option = { # Play as Vermont
+		name = lau.1.c
+		VER = {
+			change_tag_from = LAU 
+		}
+	}
+}

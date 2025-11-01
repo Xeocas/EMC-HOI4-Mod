@@ -1,0 +1,124 @@
+bookmarks = {
+	bookmark = {
+		name = "SHADOW_OF_OVERCLAIM_NAME"
+		desc = "SHADOW_OF_OVERCLAIM_DESC"
+		date = 2024.1.1.12
+		picture = "GFX_select_date_2024"
+		default_country = "CAS"
+		default = yes
+
+		"VNC"={
+			history = "VNC_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = monarchy
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+		
+		"JAP"={
+			history = "JAP_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = monarchy
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"BRZ"={
+			history = "BRZ_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = monarchy
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"CAS"={
+			history = "CAS_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = democratic
+			ideas = {
+				eden_of_democracy
+				jeffcadia
+				ineffective_national_guard
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"NSR"={
+			history = "NSR_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = conservative_democrat
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"TEX"={
+			history = "TEX_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = monarchy
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"LAU"={
+			history = "LAU_SHADOW_OF_OVERCLAIM_DESC"
+			ideology = democratic
+			ideas = {
+				home_of_the_free
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_war_plan_black
+				USA_limited_intervention
+				USA_reestablish_the_gold_standard
+			}
+		}
+
+		"---"={
+			history = "OTHER_SHADOW_OF_OVERCLAIM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,28 @@
+state = {
+	id = 861
+	name = "STATE_861"
+	manpower = 2400000
+	state_category = large_town
+	
+	history = {
+		owner = LAU
+		add_core_of = QUE
+		add_core_of = LAU
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			1657 10 
+		}
+
+	}
+	
+	provinces = {
+		1657 4666 13164 
+	}
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+}

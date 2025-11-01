@@ -1,0 +1,28 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	PIL_kobi = {
+		name = PIL_LEADER_kobi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PIL_kobi_large
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

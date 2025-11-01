@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	FRO_wrestling = {
+		name = FRO_LEADER_wrestling
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FRO_wrestling_large
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

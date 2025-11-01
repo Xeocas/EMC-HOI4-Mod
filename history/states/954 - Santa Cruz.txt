@@ -1,0 +1,33 @@
+state = {
+	id = 954
+	name = "STATE_954"
+	manpower = 2600000
+	
+	state_category = large_town
+	
+	resources = {
+		oil = 3
+	}
+
+	history = {
+		owner = PAT
+		add_core_of = LAP
+		add_core_of = PAT
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+		}
+
+		victory_points = {
+			5173 10 
+		}
+	}
+
+	provinces = {
+		2169 5173 12946 12952 13305
+	}
+
+	local_supplies = 0.0 
+}

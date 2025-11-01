@@ -1,0 +1,25 @@
+state={
+	id=738
+	name="STATE_738"
+
+	history={
+		owner = IDC
+		add_core_of = IDC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			4579 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		4579 
+	}
+	manpower=1100000
+	buildings_max_level_factor=1	
+	state_category="town"
+
+	local_supplies=0.0 
+}

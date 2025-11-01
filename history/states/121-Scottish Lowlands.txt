@@ -1,0 +1,30 @@
+
+state={
+	id=121
+	name="STATE_121" # Lothian
+	manpower = 275000
+	
+	state_category = town
+
+	history={
+		add_core_of = SCO
+		owner = NSR
+		victory_points = { 9392 10 }
+		victory_points = { 6300 1 }
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			6300 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = GBR
+		add_core_of = NSR
+	}
+
+	provinces={
+		159 6300 9314 9383 9392 11378 
+	}
+
+	local_supplies=0.0 
+}

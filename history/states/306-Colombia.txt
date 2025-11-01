@@ -1,0 +1,26 @@
+
+state={
+	id=306
+	name="STATE_306" # Cundinamarca
+	manpower = 11000
+	
+	state_category = town
+	
+	history={
+		owner = GRA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GRA
+		victory_points = {
+			10747 3
+		}
+
+	}
+
+	provinces={
+		2079 7936 7991 7993 10747 10790 10846 
+	}
+
+	local_supplies=4.0 
+}

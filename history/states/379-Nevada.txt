@@ -1,0 +1,29 @@
+state = {
+	id = 379
+	name = "STATE_379"
+	manpower = 190000
+	
+	state_category = town
+	
+	resources = {
+		steel = 50
+		tungsten = 32
+		aluminium = 25
+	}
+
+	history = {
+		owner = CAS
+		add_core_of = NEV
+		add_core_of = JEF
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		1862 4521 4607 4736 7756 7827 10422 10591 12134 12399 
+	}
+
+	local_supplies = 0.0 
+}

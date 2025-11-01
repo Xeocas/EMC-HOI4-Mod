@@ -1,0 +1,27 @@
+state = {
+	id = 100
+	name = "STATE_100"
+	manpower = 2600000
+	
+	state_category = rural
+	
+	
+	history = {
+		owner = NSR
+		victory_points = { 12674 1 }
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			12674 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = NSR
+		add_core_of = ICE
+	}
+	provinces = {
+		4861 12674 12689 13266 13267 13268 13271
+	}
+
+	local_supplies = 0.0 
+}

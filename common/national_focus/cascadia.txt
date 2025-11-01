@@ -1,0 +1,471 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = cas_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CAS
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = CAS
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	focus = {
+		id = CAS_the_setrus_administration
+		icon = CAS_setrus_admin
+		x = 5
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = CAS_project_fresno_1
+		icon = GFX_focus_IRQ_construct_the_kut_barrage
+		prerequisite = { focus = CAS_the_setrus_administration }
+		x = 0
+		y = 1
+		relative_position_id = CAS_the_setrus_administration
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			
+			378 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_national_city_olympia
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		prerequisite = { focus = CAS_project_fresno_1 }
+		x = 0
+		y = 1
+		relative_position_id = CAS_project_fresno_1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CAS_vancouver_emergency_funding_1
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = CAS_national_city_olympia }
+		x = 0
+		y = 1
+		relative_position_id = CAS_national_city_olympia
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			
+			1020 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 1408
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 4428
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 4413
+					level = 1
+					instant_build = yes
+				}
+			}
+			386 = {
+				add_building_construction = {
+					type = bunker
+					province = 7442
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12214
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = CAS_national_sports_act
+		icon = CAS_hockey
+		prerequisite = { focus = CAS_the_setrus_administration }
+		x = -2
+		y = 1
+		relative_position_id = CAS_the_setrus_administration
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_political_power = 25
+			
+			472 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = CAS_project_vancouver_1
+		icon = GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
+		prerequisite = { focus = CAS_vancouver_emergency_funding_1 }
+		x = 0
+		y = 1
+		relative_position_id = CAS_vancouver_emergency_funding_1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_political_power = 10
+			
+			1020 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = CAS_icerail_preservation_act
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = CAS_project_vancouver_1 }
+		x = 0
+		y = 1
+		relative_position_id = CAS_project_vancouver_1
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_political_power = -100
+			CAS = {
+				country_event = {
+					id = cas.1
+					hours = 24
+				}	
+			}
+			
+			1019 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	# Diplo tree
+
+	focus = {
+		id = CAS_na_pact_uf
+		icon = GFX_goal_support_communism
+		x = 9
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			SOV = {
+				NOT = { has_war_with = CAS }
+				country_exists = SOV
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			diplomatic_relation = {
+    			country = SOV
+    			relation = non_aggression_pact
+    			active = yes
+			}
+			diplomatic_relation = {
+    			country = CAP
+    			relation = non_aggression_pact
+    			active = yes
+			}
+			diplomatic_relation = {
+    			country = YUE
+    			relation = non_aggression_pact
+    			active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_patagonia_na_pact
+		icon = GFX_focus_ARG_a_new_trading_partner
+		prerequisite = { focus = CAS_na_pact_uf}
+		x = 0
+		y = 1
+		relative_position_id = CAS_na_pact_uf
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			PAT = {
+				NOT = { has_war_with = CAS }
+				country_exists = PAT
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			diplomatic_relation = {
+    			country = PAT
+    			relation = non_aggression_pact
+    			active = yes
+			}
+		}
+	}
+
+	
+}

@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	USA_ghosty = {
+		name = USA_LEADER_ghosty
+		portraits = {
+			civilian = {
+				large = GFX_portrait_USA_ghosty_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

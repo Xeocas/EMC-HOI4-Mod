@@ -1,0 +1,40 @@
+
+state={
+	id=423
+	name="STATE_423" # Madurai
+	manpower = 2700000
+	
+	state_category = large_city
+	
+	resources={
+		rubber=19
+	}
+
+	history={
+		owner = LAS
+		add_core_of = LAS
+		add_core_of = IND
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 1
+			10278 = {
+				naval_base = 8
+			}
+		}
+		victory_points = {
+			10278 10 
+		}
+		victory_points = {
+			7265 15 
+		}
+
+	}
+
+	provinces={
+		1238 1268 1381 4327 4416 4420 7265 7363 7391 7436 7447 8067 10130 10190 10246 10274 10278 10808 12164 12275 
+	}
+
+	local_supplies=0.0 
+}

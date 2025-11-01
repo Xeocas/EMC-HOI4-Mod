@@ -1,0 +1,37 @@
+state = {
+	id = 518
+	name = "STATE_518"
+	manpower = 1600000
+	
+	state_category = town
+
+	history = {
+		owner = VIC
+		add_core_of = AST
+		add_core_of = VIC
+
+		victory_points = {
+			5187 1 # Hobart
+		}
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+
+			5187 = {
+				naval_base = 2
+				# The Great Lake Scheme
+				dam = 1
+			}
+
+		}
+		
+	}
+	provinces = {
+		2183 2189 5181 5187 10665 12645
+	}
+
+	local_supplies = 0.0 
+}

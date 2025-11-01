@@ -1,0 +1,27 @@
+state={
+	id=774
+	name="STATE_774"
+
+	history={
+		owner = CHA
+		add_core_of = CHA
+		victory_points = {
+			1473 10
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 5
+		}
+
+	}
+
+	provinces={
+		1473 1883 1993 2081 3123 3181 4897 4978 7919 9152 13138 13211 
+	}
+	manpower=9700000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+
+	local_supplies=3.0 
+}

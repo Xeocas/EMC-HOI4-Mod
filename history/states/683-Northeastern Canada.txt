@@ -1,0 +1,29 @@
+state={
+	id=683
+	name="STATE_683"
+	resources={
+		aluminium=7.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = USA
+
+		victory_points = {
+			10721 2 
+		}
+	}
+
+	provinces={
+		2947 8962 10721 13188 13190 13191 
+	}
+
+	manpower=990000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

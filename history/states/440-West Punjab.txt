@@ -1,0 +1,31 @@
+state = {
+	id = 440
+	name = "STATE_440"
+	manpower = 220000
+	
+	state_category = town
+
+	history = {
+		owner = IND
+		add_core_of = PAK
+
+		victory_points = {
+			10887 5 # Lahore
+		}
+		
+		buildings = {
+			infrastructure = 1
+
+			# Mangla Dam
+			#8106 = { dam = 1 }
+			
+		}
+		
+	}
+
+	provinces={
+		4979 8007 8022 8106 9084 10066 10139 10173 10772 10887 10898 12005 12822 
+	}
+
+	local_supplies = 0.0 
+}

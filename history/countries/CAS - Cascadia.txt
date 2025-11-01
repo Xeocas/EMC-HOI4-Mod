@@ -1,0 +1,65 @@
+﻿capital = 386 # Washington
+
+oob = "CAS_1936"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.4
+add_command_power = 15
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	superior_firepower = 1
+	base_strike = 1
+	motorised_infantry = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	marines = 1
+	basic_train = 1
+	engine_tech_1 = 1
+}
+
+add_ideas = {
+	eden_of_democracy
+	the_frontier
+	jeffcadia
+	ineffective_national_guard
+}
+
+set_convoys = 150
+
+set_power_balance = {
+	id = CAS_balance_of_power
+}
+
+create_faction = OFN
+add_to_faction = CAS
+add_to_faction = LAU
+add_to_faction = MWU
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 55
+	social_democrat = 25
+	conservative_democrat = 19
+	communism = 1
+}
+
+recruit_character = CAS_setrus
+recruit_character = CAS_moxie
+recruit_character = CAS_sayer
+recruit_character = CAS_bon
+recruit_character = CAS_akeboun

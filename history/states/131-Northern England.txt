@@ -1,0 +1,36 @@
+
+state={
+	id=131
+	name="STATE_131"
+	manpower = 212000
+	
+	state_category = town
+	resources = {
+		steel = 18
+		
+	}
+
+	history={
+		owner = NSR
+		add_core_of = EGL
+		add_core_of = GBR
+		add_core_of = NSR
+		victory_points = {
+			351 8 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 2
+			351 = {
+				naval_base = 4
+			}
+		}
+	}
+
+	provinces={
+		351 11270 11299 
+	}
+
+	local_supplies=14.0 
+}

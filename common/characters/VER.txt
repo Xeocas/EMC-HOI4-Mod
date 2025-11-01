@@ -1,0 +1,28 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	VER_prince = {
+		name = VER_LEADER_prince
+		portraits = {
+			civilian = {
+				large = GFX_portrait_VER_prince_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=conservatism
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

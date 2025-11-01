@@ -1,0 +1,132 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_CAS_setrus_large"
+		texturefile = "gfx/leaders/CAS/portrait_CAS_setrus.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAS_moxie_large"
+		texturefile = "gfx/leaders/CAS/portrait_CAS_moxie.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAS_sayer_large"
+		texturefile = "gfx/leaders/CAS/portrait_CAS_sayer.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAS_bon_large"
+		texturefile = "gfx/leaders/CAS/portrait_CAS_bon.tga"
+	}
+	spriteType = {
+		name = "GFX_portrait_CAS_akeboun_large"
+		texturefile = "gfx/leaders/CAS/portrait_CAS_akeboun.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_BRZ_olivio_large"
+		texturefile = "gfx/leaders/BRZ/portrait_BRZ_olivio.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CHA_karn_large"
+		texturefile = "gfx/leaders/CHA/portrait_CHA_karn.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_EUP_rawr_large"
+		texturefile = "gfx/leaders/EUP/portrait_EUP_rawr.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_FRO_wrestling_large"
+		texturefile = "gfx/leaders/FRO/portrait_FRO_wrestling.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GOA_andrew_large"
+		texturefile = "gfx/leaders/GOA/portrait_GOA_andrew.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_HAV_drac_large"
+		texturefile = "gfx/leaders/HAV/portrait_HAV_drac.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ILI_lucas_large"
+		texturefile = "gfx/leaders/ILI/portrait_ILI_lucas.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ISR_furball_large"
+		texturefile = "gfx/leaders/ISR/portrait_ISR_furball.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_JEF_forest_large"
+		texturefile = "gfx/leaders/JEF/portrait_JEF_forest.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_LAU_masterewild_large"
+		texturefile = "gfx/leaders/LAU/portrait_LAU_masterewild.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_MEX_saph_large"
+		texturefile = "gfx/leaders/MEX/portrait_MEX_saph.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_NRC_unbated_large"
+		texturefile = "gfx/leaders/NRC/portrait_NRC_unbated.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_NSR_spencer_large"
+		texturefile = "gfx/leaders/NSR/portrait_NSR_spencer.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_NWT_xhydre_large"
+		texturefile = "gfx/leaders/NWT/portrait_NWT_xhydre.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_PIL_kobi_large"
+		texturefile = "gfx/leaders/PIL/portrait_PIL_kobi.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_RCA_bon_large"
+		texturefile = "gfx/leaders/RCA/portrait_RCA_bon.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_TEX_paso_large"
+		texturefile = "gfx/leaders/TEX/portrait_TEX_paso.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_USA_ghosty_large"
+		texturefile = "gfx/leaders/USA/portrait_USA_ghosty.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_USS_olsar_large"
+		texturefile = "gfx/leaders/USS/portrait_USS_olsar.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_VER_prince_large"
+		texturefile = "gfx/leaders/VER/portrait_VER_prince.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_VNC_greed_large"
+		texturefile = "gfx/leaders/VNC/portrait_VNC_greed.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_YUK_tuzzie_large"
+		texturefile = "gfx/leaders/YUK/portrait_YUK_tuzzie.tga"
+	}
+}

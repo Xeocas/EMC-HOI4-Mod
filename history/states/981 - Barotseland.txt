@@ -1,0 +1,32 @@
+state = {
+	id = 981
+	name = "STATE_981" # Barotseland
+	
+	state_category = rural
+	manpower = 112000
+
+	resources = {
+		chromium = 16
+		tungsten = 4
+	}
+
+	history = {
+		owner = VIC
+		add_core_of = EAU
+
+		victory_points = {
+			697 1 # Mongu
+		}
+
+		buildings = {
+			infrastructure = 0
+		}
+	}
+
+	provinces = {
+		697 7872 10538 12677
+	}
+	
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0 
+}

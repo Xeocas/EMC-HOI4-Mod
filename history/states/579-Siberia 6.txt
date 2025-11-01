@@ -1,0 +1,27 @@
+
+state = {
+	id = 579
+	name = "STATE_579" # Salekhard
+	manpower = 2300000
+	
+	state_category = city
+
+	history = {
+		victory_points = {
+			1684 1
+		}
+		owner = OBB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		add_core_of = OBB
+	}
+
+	provinces = {
+		1664 1684 3169 4669 7689 7738 8461 9142 13076
+	}
+
+	local_supplies = 0.0 
+}

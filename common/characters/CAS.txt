@@ -1,0 +1,84 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	CAS_setrus = {
+		name = CAS_LEADER_setrus
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CAS_setrus_large
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1947.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=socialism
+			expire="1947.1.1.1"
+			id=-1
+		}
+	}
+
+	CAS_moxie = {
+		name = CAS_LEADER_moxie
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CAS_moxie_large
+			}
+		}
+		country_leader={
+			ideology = communist
+			expire = "1947.1.1.1"
+			id=-1
+		}
+	}
+
+	CAS_sayer = {
+		name = CAS_LEADER_sayer
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CAS_sayer_large
+			}
+		}
+		country_leader={
+			ideology = monarchist
+			expire = "1947.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology = despotism
+			expire = "1947.1.1.1"
+			id=-1
+		}
+	}
+
+	CAS_bon = {
+		name = CAS_LEADER_bon
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CAS_bon_large
+			}
+		}
+		country_leader={
+			ideology = fascism_ideology
+			expire = "1947.1.1.1"
+			id=-1
+		}
+	}
+
+	CAS_akeboun = {
+		name = CAS_LEADER_akeboun
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CAS_akeboun_large
+			}
+		}
+		country_leader={
+			ideology = conservatism
+			expire = "1947.1.1.1"
+			id=-1
+		}
+	}
+}

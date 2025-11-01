@@ -1,0 +1,33 @@
+
+state={
+	id=195
+	name="STATE_195"
+	manpower = 1800000
+	
+	state_category = metropolis
+
+	history={
+		owner = RUS
+		victory_points = {
+			3151 30.0
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 3
+			dockyard = 1
+			air_base = 10
+			3151 ={
+				naval_base = 10
+				coastal_bunker = 5
+			}
+		}
+		add_core_of = RUS
+	}
+
+	provinces={
+		79 149 3151 6174 11068 
+	}
+
+	local_supplies=11.0 
+}

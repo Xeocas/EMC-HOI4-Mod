@@ -1,0 +1,28 @@
+state = {
+	id = 781
+	name = "STATE_781" # Niger
+	manpower = 163000
+	
+	state_category = pastoral
+
+	history = { 
+		owner = MLI
+		add_core_of = MLI
+		add_claim_by = GOL
+
+		victory_points = {
+			2056 1 # Niamey
+		}
+
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces = {
+		1975 2056 12707
+	}
+
+	local_supplies = 1.0 
+}

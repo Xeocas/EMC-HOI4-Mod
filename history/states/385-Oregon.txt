@@ -1,0 +1,30 @@
+
+state={
+	id=385
+	name="STATE_385"
+	manpower = 1100000
+	
+	state_category = town
+
+	history={
+		owner = RCA
+		add_core_of = CAS
+		add_core_of = RCA
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			4826 5 
+		}
+	}
+
+	provinces={
+		1414 4347 4826 7721 7865 10305 10625 12553 
+	}
+
+	local_supplies=0.0 
+}

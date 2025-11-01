@@ -1,0 +1,26 @@
+state = {
+	id = 1014
+	name = "STATE_1014"
+	manpower = 899
+	state_category = pastoral
+
+	history = {
+		
+		owner = OMA
+		add_core_of = OMA
+
+		victory_points = {
+			13313 1 # Manama
+		}
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		13313
+	}
+
+	local_supplies = 0.0 
+}

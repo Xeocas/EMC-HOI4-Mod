@@ -1,0 +1,30 @@
+
+state={
+	id=804
+	name="STATE_804"
+	manpower = 11000
+	
+	state_category = rural
+	
+	resources={
+		aluminium=7
+	}
+
+	history={
+		owner = CRO
+		victory_points = {
+			9894 3
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+	}
+
+	provinces={
+		953 6942 9894 11845 
+	}
+
+	local_supplies=0.0 
+}

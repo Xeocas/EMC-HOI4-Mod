@@ -1,0 +1,36 @@
+###########################
+# Mexico Events
+###########################
+
+add_namespace = mex
+
+# Join the NAU
+country_event = {
+	id = mex.1
+	title = mex.1.t
+	desc = mex.1.d
+	picture = GFX_report_event_mex_civil_war
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MEX
+    	date > 2024.1.1
+		date < 2024.1.7
+	}
+	
+	option = { # The NAU will ensure our security
+		name = mex.1.a
+        ai_chance = { factor = 95 }
+		USA = {
+			country_event = {
+				id = usa.1
+				hours = 12
+			}
+		}
+	}
+    option = { # Mexico shall remain on its own
+        name = mex.1.b
+        ai_chance = { factor = 5 }
+    }
+}

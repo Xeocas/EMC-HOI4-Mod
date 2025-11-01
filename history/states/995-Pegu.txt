@@ -1,0 +1,31 @@
+state = {
+	id = 995
+	name = "STATE_995"
+	
+	state_category = town
+	manpower = 12723
+	
+	
+	history = {
+		owner = AVA
+		add_core_of = AVA
+
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
+
+		victory_points = {
+			1330 10 # Rangoon
+		}
+
+	}
+
+	provinces = {
+		1330 1650 10154 10283 10344 12127 
+	}
+
+	buildings_max_level_factor = 1.000
+	local_supplies = 6
+	
+}

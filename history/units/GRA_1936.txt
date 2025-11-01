@@ -1,0 +1,98 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"  
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0}
+		cavalry = { x = 1 y = 1}
+		cavalry = { x = 1 y = 2}
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armored Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2}
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2}
+	}
+}
+
+
+units = {
+	division= {	
+		name = "1st Infantry"
+		location = 12798
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "2nd Infantry"
+		location = 10747
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "3rd Infantry"
+		location = 4969
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "4th Infantry"
+		location = 2023
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "5th Infantry"
+		location = 2023
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "1st Cavalry"
+		location = 2023
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+}

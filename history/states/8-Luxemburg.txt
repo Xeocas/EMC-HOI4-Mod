@@ -1,0 +1,32 @@
+state=
+{
+	id=8
+	name="STATE_8"
+	
+	state_category = town
+	
+	manpower = 109000
+	resources={
+		steel=14
+	}
+
+	history=
+	{
+		owner = NTL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 
+			6583 5 # Luxembourg City
+		}
+		add_core_of = LUX
+		add_core_of = NTL
+	}
+
+	provinces = {
+		6583 13375
+	}
+
+	local_supplies=0.0 
+}

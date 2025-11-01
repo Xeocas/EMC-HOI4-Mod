@@ -1,0 +1,25 @@
+state = {
+	id = 915
+	name = "STATE_915" # Bohuslän
+	manpower = 111000
+	state_category = town
+
+	history = {
+		victory_points = {
+			6310 1
+		}
+		owner = NSR
+		add_core_of = ALA
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+
+
+	provinces = {
+		171 6310 
+	}
+
+	local_supplies=0.000
+}

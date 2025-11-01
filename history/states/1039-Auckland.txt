@@ -1,0 +1,32 @@
+state={
+	id=1039
+	name="STATE_1039"
+
+	state_category = city
+	
+	history={
+		owner = NZL
+		add_core_of = NZL
+		add_core_of = HAV
+
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			4543 = {
+				naval_base = 3
+			}
+		}
+
+		victory_points = {
+			4543 5 
+		}
+	}
+
+	provinces={
+		4543 1565 12362 12664 4718 1746 7783 12604 1713 7887 10373 10334 4615
+	}
+
+	manpower=104000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

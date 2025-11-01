@@ -1,0 +1,26 @@
+state=
+{
+	id=311
+	name="STATE_311"
+	manpower = 76000
+	
+	state_category = town
+	history=
+	{
+		add_core_of = BLZ
+		add_core_of = MSK
+		owner = CBA
+		victory_points = {
+			2077 5 
+		}
+		buildings = {
+			infrastructure = 1
+			2077 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces= { 2077 }
+
+	local_supplies=0.0 
+}

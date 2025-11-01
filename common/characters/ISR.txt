@@ -1,0 +1,23 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	ISR_furball = {
+		name = ISR_LEADER_furball
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ISR_furball_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,34 @@
+state={
+	id=1024
+	name="STATE_1024"
+
+	state_category = large_town
+	
+	resources={
+		aluminium=3
+	}
+
+	history={
+		owner = CAS
+		add_core_of = JEF
+		add_core_of = CAL
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 7
+		}
+		victory_points = {
+			610 10 
+		}
+	}
+
+	provinces={
+		610 781 3588 10159 4331 6665 6482 3644
+	}
+
+	manpower=900000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

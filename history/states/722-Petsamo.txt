@@ -1,0 +1,31 @@
+state={
+	id=722
+	name="STATE_722" #PETSAMO
+	manpower = 216000
+
+	state_category = rural
+
+	history={
+		owner = LPL
+
+		victory_points = { #Petsamo
+			9140 1
+		}
+
+		buildings = {
+			infrastructure = 1
+			9140 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = FIN
+		add_core_of = LPL
+
+	}
+	
+	provinces={
+		6012 6183 9140 11142 
+	}
+
+	local_supplies=0.0 
+}

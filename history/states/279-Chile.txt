@@ -1,0 +1,55 @@
+state = {
+	id = 279
+	name = "STATE_279" # Santiago
+	manpower = 1200000 # Was 3935146
+	
+	state_category = town
+	
+	resources = {
+		steel = 14
+		tungsten = 8
+		chromium = 4
+	}
+
+	history = {
+		owner = LAP
+		add_core_of = LAP
+		add_core_of = PAT
+		add_core_of = INC
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 3
+			8222 = {
+				naval_base = 5
+				coastal_bunker = 2
+			}
+			650 = {
+				bunker = 3
+			}
+		}
+		
+		victory_points = {
+			650 10
+		}
+		victory_points = {
+			8194 3
+		}
+		victory_points = {
+			8222 3
+		}
+		victory_points = {
+			12984 2
+		}
+		victory_points = {
+			8251 1
+		}
+	}
+
+	provinces = {
+		650 5191 8194 8222 8229 8251 12984 
+	}
+
+	local_supplies = 0.0 
+}

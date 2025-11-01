@@ -1,0 +1,24 @@
+state={
+	id=712
+	name="STATE_712"
+	manpower=335000
+	state_category = tiny_island
+	
+	history=
+	{
+		owner = IDC
+		add_core_of = IDC
+		buildings = {
+			infrastructure = 2
+			13002 = {
+				naval_base = 2
+			}
+		}
+	}
+	
+	provinces={
+		13002 
+	}
+
+	local_supplies=0.0 
+}

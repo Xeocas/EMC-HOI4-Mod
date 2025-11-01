@@ -1,0 +1,33 @@
+
+state={
+	id=419
+	name="STATE_419"
+	manpower = 2300000
+	
+	state_category = town
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			1896 3 
+		}
+		victory_points = {
+			7604 1 
+		}
+		victory_points = {
+			1822 1 
+		}
+		add_core_of = PER
+		add_core_of = KUR
+		add_claim_by = CAP
+	}
+
+	provinces={
+		1636 1822 7604 12861 13120 
+	}
+
+	local_supplies=4.0 
+}

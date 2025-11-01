@@ -1,0 +1,28 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	MWU_crystal_024 = {
+		name = MWU_LEADER_crystal_024
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MWU_crystal_024_large
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=despotism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

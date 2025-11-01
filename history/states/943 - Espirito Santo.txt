@@ -1,0 +1,36 @@
+
+state = {
+	id = 943
+	name = "STATE_943"
+	manpower = 187000
+	
+	state_category = town
+	
+	resources = {
+		steel = 1
+	}
+
+	history = {
+
+		owner = BRZ
+		add_core_of = BRZ
+
+		victory_points = {
+			10999 3
+		}
+
+		buildings = {
+			infrastructure = 1
+			10999 = {
+				naval_base = 1
+			}
+		}
+		
+	}
+
+	provinces = {
+		2153 8196 10999
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	NWT_xhydre = {
+		name = NWT_LEADER_xhydre
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NWT_xhydre_large
+			}
+		}
+		country_leader={
+			ideology=communist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

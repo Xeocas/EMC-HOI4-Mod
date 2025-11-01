@@ -1,0 +1,90 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = emc_news
+
+# Mexico joins NAU
+news_event = {
+	id = emc_news.1
+	title = emc_news.1.t
+	desc = emc_news.1.d
+	picture = GFX_report_event_mex_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = emc_news.1.a
+		trigger = {
+			NOT = {
+				TAG = MEX
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = emc_news.1.b
+		trigger = { TAG = MEX }
+	}
+	option = {
+		name = emc_news.1.c
+		trigger = { TAG = USA }
+	}
+}
+
+# Vermont independence
+news_event = {
+	id = emc_news.2
+	title = emc_news.2.t
+	desc = emc_news.2.d
+	picture = GFX_report_event_AUS_political_rally
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = emc_news.2.a
+		trigger = {
+			NOT = {
+				TAG = VER
+				TAG = LAU
+			}
+		}
+	}
+	option = {
+		name = emc_news.2.b
+		trigger = { TAG = VER }
+	}
+	option = {
+		name = emc_news.2.c
+		trigger = { TAG = LAU }
+	}
+}
+
+# Havaiki founded
+news_event = {
+	id = emc_news.3
+	title = emc_news.3.t
+	desc = emc_news.3.d
+	picture = GFX_report_event_SOV_national_academy_of_sciences
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = emc_news.3.a
+		trigger = {
+			NOT = {
+				TAG = HAV
+			}
+		}
+	}
+	option = {
+		name = emc_news.3.b
+		trigger = { TAG = HAV }
+	}
+}

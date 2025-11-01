@@ -1,0 +1,39 @@
+state={
+	id=1020
+	name="STATE_1020"
+
+	state_category = city
+
+	history={
+		owner = CAS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			dockyard = 1
+			air_base = 3
+			1408 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = CAS
+		add_core_of = RCA
+		victory_points = {
+			1408 20 
+		}
+		victory_points = {
+			10258 3 
+		}
+		victory_points = {
+			4385 5 
+		}
+	}
+
+	provinces={
+		1408 4428 4413 1858 1393 10273 4385 12231 10258 10228
+	}
+
+	manpower=3200000
+	buildings_max_level_factor=1.000
+
+	local_supplies=4.0
+}
