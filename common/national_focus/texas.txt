@@ -1,0 +1,2542 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = tex_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TEX
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = TEX
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	focus = {
+		id = TEX_continue_the_path
+		icon = GFX_focus_generic_monarchy_2
+		x = 16
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_nationalist_sentiments
+		icon = GFX_focus_FIN_national_fanatism
+		prerequisite = { focus = TEX_continue_the_path }
+		x = 0
+		y = 1
+		relative_position_id = TEX_continue_the_path
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_secure_rio_grande
+		icon = GFX_focus_mex_jefe_maximo
+		prerequisite = { focus = TEX_nationalist_sentiments }
+		x = -3
+		y = 1
+		relative_position_id = TEX_nationalist_sentiments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_war = no
+			is_subject = no
+			IF = {
+				has_army_manpower = { size > 99999 }
+			}
+		}
+		
+		bypass = {
+			OR = {
+				MEX = {
+					exists = no
+				}
+				TEX = {
+					owns_state = 480
+					owns_state = 479
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL}
+
+		select_effect = {
+			
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = MEX
+					MEX = {
+						has_civil_war = no
+						OR = {
+							owns_state = 480
+							owns_state = 479
+						}
+					}
+				}
+				if = {
+					MEX = {
+						country_event = {
+							id = mex.2
+							days = 1
+						}
+					}		
+					effect_tooltip = {
+						custom_effect_tooltip = if_they_accept_tt
+						add_political_power = 50
+						add_war_support = 0.05
+						add_stability = 0.05
+						army_experience = 10
+						add_world_tension = 5
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+												
+						custom_effect_tooltip = if_they_refuse_tt
+						create_wargoal = {
+							type = take_state_focus
+							target = MEX
+							generator = { 480 479 }
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					480 = {
+						owner = {
+							NOT = {
+								tag = MEX
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 480
+			}
+			if = {
+				limit = {
+					479 = {
+						owner = {
+							NOT = {
+								tag = MEX
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 479
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_annex_yucatan
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = TEX_secure_rio_grande }
+		x = 0
+		y = 1
+		relative_position_id = TEX_secure_rio_grande
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_war = no
+			is_subject = no
+			IF = {
+				has_army_manpower = { size > 199999 }
+			}
+		}
+		
+		bypass = {
+			OR = {
+				MEX = {
+					exists = no 
+				}
+				TEX = {
+					owns_state = 474
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL}
+
+		select_effect = {
+			
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = MEX
+					MEX = {
+						has_civil_war = no
+						OR = {
+							owns_state = 474
+						}
+					}
+				}
+				if = {
+					MEX = {
+						country_event = {
+							id = mex.3
+							days = 1
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_political_power = 75
+			add_war_support = 0.05
+			army_experience = 15
+			navy_experience = 10
+			add_world_tension = 5
+		}
+	}
+
+	focus = {
+		id = TEX_the_mexican_gambit
+		icon = GFX_focus_mex_caudillo_private_armies
+		prerequisite = { focus = TEX_annex_yucatan }
+		mutually_exclusive = { focus = TEX_finish_off_mexico }
+		x = -2
+		y = 3
+		relative_position_id = TEX_annex_yucatan
+
+		cost = 10
+
+		ai_will_do = {
+			base = 15
+		}
+
+		available = {
+			has_war = no
+			is_subject = no
+		}
+		
+		bypass = {
+			MEX = {
+				exists = no 
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL}
+
+		select_effect = {
+			
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TEX_the_mexican_gambit
+				bonus = 1.0
+				uses = 2
+				category = encryption_tech
+				category = decryption_tech
+			}
+			474 = {
+				add_core_of = ROOT
+			}
+			add_political_power = 25
+			add_war_support = 0.05
+			army_experience = 10
+			navy_experience = 10
+			air_force_experience = 10
+		}
+	}
+
+	focus = {
+		id = TEX_reform_senate
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = TEX_nationalist_sentiments }
+		x = 0
+		y = 1
+		relative_position_id = TEX_nationalist_sentiments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_crusade_against_communism
+		icon = GFX_focus_GER_end_european_communism
+		prerequisite = { focus = TEX_reform_senate }
+		x = 0
+		y = 1
+		relative_position_id = TEX_reform_senate
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_world_tension = 2
+		}
+	}
+
+	focus = {
+		id = TEX_affirm_american_claims
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		prerequisite = { focus = TEX_crusade_against_communism }
+		prerequisite = { focus = TEX_annex_yucatan }
+		x = -1
+		y = 1
+		relative_position_id = TEX_crusade_against_communism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			has_war = no
+			is_subject = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_world_tension = 5
+			add_political_power = 25
+			add_war_support = 0.05
+			add_state_claim = 376
+			add_state_claim = 371
+			add_state_claim = 372
+		}
+	}
+
+	focus = {
+		id = TEX_strike_california
+		icon = GFX_focus_GRE_a_land_of_mountains
+		prerequisite = { focus = TEX_affirm_american_claims }
+		x = -2
+		y = 1
+		relative_position_id = TEX_affirm_american_claims
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			has_war = no
+			is_subject = no
+			IF = {
+				has_army_manpower = { size > 499999 }
+			}
+			TEX = {
+				owns_state = 382
+				owns_state = 376
+			}
+		}
+		
+		bypass = {
+			OR = {
+				CAS = {
+					exists = no 
+				}
+				CAL = {
+					owns_state = 378
+					owns_state = 1024
+					owns_state = 1029
+					owns_state = 1030
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_world_tension = 20
+			add_political_power = 50
+			add_war_support = 0.1
+			add_state_claim = 378
+			add_state_claim = 1024
+			add_state_claim = 1029
+			add_state_claim = 1030
+			create_wargoal = {
+				type = take_state_focus
+				target = CAS
+				generator = { 378 1024 1029 1030 }
+			}
+			puppet = CAL
+			puppet = RCA
+			CAS = {
+				country_event = {
+					id = cas.2
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_finish_off_mexico
+		icon = GFX_focus_attack_mexico
+		prerequisite = { focus = TEX_strike_california }
+		mutually_exclusive = { focus = TEX_the_mexican_gambit }
+		x = 0
+		y = 1
+		relative_position_id = TEX_strike_california
+
+		cost = 10
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+		
+		bypass = {
+			OR = {
+				has_completed_focus = TEX_the_mexican_gambit
+				MEX = {
+					exists = no
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			add_world_tension = 10
+			create_wargoal = {
+				type = annex_everything
+				target = MEX
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_eastern_blitz
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = TEX_affirm_american_claims }
+		x = 2
+		y = 1
+		relative_position_id = TEX_affirm_american_claims
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+		
+		bypass = {
+			TEX = {
+				owns_state = 372
+				owns_state = 367
+				owns_state = 371
+				owns_state = 370
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			add_world_tension = 1
+			add_state_claim = 372
+			add_state_claim = 367
+			add_state_claim = 371
+			add_state_claim = 370
+			army_experience = 25
+			create_wargoal = {
+				type = take_state_focus
+				target = USS
+				generator = { 372 367 371 370 }
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_operation_tropical_hideaway
+		icon = GFX_focus_CHL_liberate_the_caribbean
+		prerequisite = { focus = TEX_eastern_blitz }
+		x = 0
+		y = 1
+		relative_position_id = TEX_eastern_blitz
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+		
+		bypass = {
+			TEX = {
+				owns_state = 315
+				owns_state = 690
+				owns_state = 693
+				owns_state = 366
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			add_world_tension = 5
+			add_state_claim = 315
+			add_state_claim = 690
+			add_state_claim = 693
+			add_state_claim = 366
+			navy_experience = 15
+			create_wargoal = {
+				type = take_state_focus
+				target = CBA
+				generator = { 315 693 }
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_war_panama
+		icon = GFX_focus_generic_naval_invasion_tank
+		prerequisite = { focus = TEX_operation_tropical_hideaway }
+		prerequisite = { focus = TEX_finish_off_mexico }
+		mutually_exclusive = { focus = TEX_befriend_panama }
+		x = 0
+		y = 1
+		relative_position_id = TEX_finish_off_mexico
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0.1
+				has_war_with = CAS
+			}
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+		
+		bypass = {
+			TEX = {
+				owns_state = 304
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			add_world_tension = 5
+			add_state_claim = 304
+			navy_experience = 5
+			army_experience = 5
+			create_wargoal = {
+				type = annex_everything
+				target = PAN
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_befriend_panama
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = TEX_operation_tropical_hideaway }
+		prerequisite = { focus = TEX_finish_off_mexico }
+		mutually_exclusive = { focus = TEX_war_panama }
+		x = 0
+		y = 1
+		relative_position_id = TEX_operation_tropical_hideaway
+
+		cost = 5
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+			PAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_stability = 0.1
+			diplomatic_relation = {
+    			country = PAN
+    			relation = non_aggression_pact
+    			active = yes
+			}
+		}
+	}
+
+	# Econonmy tree
+
+	focus = {
+		id = TEX_development_plan
+		icon = GFX_focus_generic_modernize_industry
+		x = 22
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = TEX_development_plan
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_develop_houston
+		icon = GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
+		prerequisite = { focus = TEX_development_plan }
+		x = 0
+		y = 1
+		relative_position_id = TEX_development_plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 1035
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			1035 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_dallas_investments
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TEX_develop_houston }
+		x = 0
+		y = 1
+		relative_position_id = TEX_develop_houston
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 375
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			375 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_i_want_gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = TEX_dallas_investments }
+		x = 0
+		y = 1
+		relative_position_id = TEX_dallas_investments
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 1035
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			1035 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			TEX_modify_industrial_modifier = yes
+			add_to_variable = { 
+				TEX_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_icerail_construction_i
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = TEX_i_want_gold }
+		mutually_exclusive = { focus = TEX_develop_the_core }
+		x = -3
+		y = 1
+		relative_position_id = TEX_i_want_gold
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.2
+				is_historical_focus_on = yes
+			}
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 375
+				owns_state = 1034
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			375 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1034 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TEX_icerail_construction_i
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			TEX_modify_industrial_modifier = yes
+			add_to_variable = { 
+				TEX_production_speed_industrial_complex_factor = 0.02
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = { 
+				TEX_production_speed_rail_way_factor = 0.10
+				tooltip = production_speed_rail_way_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_rio_grande_expeditions
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = TEX_icerail_construction_i }
+		x = 0
+		y = 1
+		relative_position_id = TEX_icerail_construction_i
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 480
+				owns_state = 479
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			479 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+			}
+			480 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+			add_tech_bonus = {
+				name = TEX_rio_grande_expeditions
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_masters_of_the_prarie
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = TEX_rio_grande_expeditions }
+		x = 0
+		y = 1
+		relative_position_id = TEX_rio_grande_expeditions
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 382
+				owns_state = 383
+				owns_state = 384
+			}
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			383 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			382 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+			384 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TEX_masters_of_the_prarie
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_develop_the_core
+		icon = GFX_focus_generic_central_planning
+		prerequisite = { focus = TEX_i_want_gold }
+		mutually_exclusive = { focus = TEX_icerail_construction_i }
+		x = -1
+		y = 1
+		relative_position_id = TEX_i_want_gold
+
+		cost = 10
+
+		ai_will_do = {
+			base = 15
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 1035
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			1035 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TEX_develop_the_core
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			TEX_modify_industrial_modifier = yes
+			add_to_variable = { 
+				TEX_production_speed_industrial_complex_factor = 0.10
+				tooltip = production_speed_industrial_complex_factor_tt
+			}
+			add_to_variable = { 
+				TEX_production_speed_rail_way_factor = 0.02
+				tooltip = production_speed_rail_way_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_invest_in_yucatan
+		icon = GFX_focus_CHL_expand_the_forestry
+		prerequisite = { focus = TEX_develop_the_core }
+		x = 0
+		y = 1
+		relative_position_id = TEX_develop_the_core
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 474
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			474 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_resource = {
+					type = rubber
+					amount = 15
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_jewel_of_america
+		icon = GFX_focus_CHL_work_on_the_panamerican_highway
+		prerequisite = { focus = TEX_invest_in_yucatan }
+		x = 0
+		y = 1
+		relative_position_id = TEX_invest_in_yucatan
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 1035
+			}
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			1035 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = TEX_masters_of_the_prarie
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_military_development_plan
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TEX_i_want_gold }
+		x = 1
+		y = 1
+		relative_position_id = TEX_i_want_gold
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+			TEX_modify_industrial_modifier = yes
+			add_to_variable = { 
+				TEX_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_red_river_projects
+		icon = GFX_focus_BEL_dam_the_consequences
+		prerequisite = { focus = TEX_military_development_plan }
+		x = 0
+		y = 1
+		relative_position_id = TEX_military_development_plan
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 374
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			374 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = TEX_gulf_coast_naval_yards
+		icon = GFX_focus_FIN_acquire_andros_dockyards
+		prerequisite = { focus = TEX_red_river_projects }
+		x = 0
+		y = 1
+		relative_position_id = TEX_red_river_projects
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			TEX = {
+				owns_state = 1035
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			1035 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
+		}
+	}
+
+	# Temp mil tree
+
+	focus = {
+		id = tex_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = tex_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = tex_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = tex_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = {
+		id = tex_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = tex_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = tex_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = tex_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = tex_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = tex_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = tex_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = tex_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = {
+		id = tex_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = tex_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = tex_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+			IF = {
+				limit = {
+					has_tech = motorised_infantry
+				}
+				add_equipment_to_stockpile = { 
+					type = motorized_equipment
+					amount = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = tex_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = tex_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = tex_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = tex_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = tex_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = tex_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
+
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+
+		}
+	}
+
+	focus = {
+		id = tex_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = tex_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = tex_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = tex_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = tex_equipment_effort_3 }
+		prerequisite = { focus = tex_doctrine_effort_2 }
+		prerequisite = { focus = tex_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = tex_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = tex_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 5
+		y = 0
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = tex_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = tex_aviation_effort }
+		mutually_exclusive = { focus = tex_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = tex_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = tex_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = tex_aviation_effort }
+		mutually_exclusive = { focus = tex_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = tex_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = tex_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = tex_bomber_focus focus = tex_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = tex_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = tex_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = tex_aviation_effort_2 }
+		prerequisite = { focus = tex_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = tex_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = tex_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = tex_aviation_effort_2 }
+		prerequisite = { focus = tex_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = tex_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 1 # was 2
+				category = rocketry
+				category = jet_technology
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = tex_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = tex_aviation_effort_2 }
+		prerequisite = { focus = tex_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = tex_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = tex_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = tex_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = tex_naval_effort }
+		mutually_exclusive = { focus = tex_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = tex_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = tex_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = tex_naval_effort }
+		mutually_exclusive = { focus = tex_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = tex_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = tex_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = tex_flexible_navy focus = tex_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = tex_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = tex_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = tex_large_navy focus = tex_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = tex_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = tex_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = tex_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = tex_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = tex_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = tex_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = tex_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	
+}
