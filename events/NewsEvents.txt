@@ -1,0 +1,179 @@
+###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# Mexico joins NAU
+news_event = {
+	id = news.450
+	title = news.450.t
+	desc = news.450.d
+	picture = GFX_news_event_mex_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.450.a
+		trigger = {
+			NOT = {
+				TAG = MEX
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = news.450.b
+		trigger = { TAG = MEX }
+	}
+	option = {
+		name = news.450.c
+		trigger = { TAG = USA }
+	}
+}
+
+# Vermont independence
+news_event = {
+	id = news.451
+	title = news.451.t
+	desc = news.451.d
+	picture = GFX_news_event_generic_rally_3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.451.a
+		trigger = {
+			NOT = {
+				TAG = VER
+				TAG = LAU
+			}
+		}
+	}
+	option = {
+		name = news.451.b
+		trigger = { TAG = VER }
+	}
+	option = {
+		name = news.451.c
+		trigger = { TAG = LAU }
+	}
+}
+
+# Havaiki founded
+news_event = {
+	id = news.452
+	title = news.452.t
+	desc = news.452.d
+	picture = GFX_news_event_SOV_supreme_soviet
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.452.a
+		trigger = {
+			NOT = {
+				TAG = HAV
+			}
+		}
+	}
+	option = {
+		name = news.452.b
+		trigger = { TAG = HAV }
+	}
+}
+
+# Texas conquers Rio Grande
+news_event = {
+	id = news.453
+	title = news.453.t
+	desc = news.453.d
+	picture = GFX_news_event_italian_tank_desert
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.453.a
+		trigger = {
+			NOT = {
+				TAG = TEX
+				TAG = MEX
+			}
+		}
+	}
+	option = {
+		name = news.453.b
+		trigger = { TAG = TEX }
+	}
+	option = {
+		name = news.453.c
+		trigger = { TAG = MEX }
+	}
+}
+
+# NAU in decline
+news_event = {
+	id = news.454
+	title = news.454.t
+	desc = news.454.d
+	picture = GFX_news_event_civil_war_turkey
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.454.a
+		trigger = {
+			NOT = {
+				TAG = USA
+			}
+		}
+	}
+	option = {
+		name = news.454.b
+		trigger = { TAG = USA }
+	}
+}
+
+# GAW outbreak
+news_event = {
+	id = news.455
+	title = news.455.t
+	desc = news.455.d
+	picture = GFX_news_event_COG_force_publique_marching_to_war
+	
+	major = yes
+	
+	trigger = {
+		CAS = {
+			has_war_with = TEX
+		}
+	}
+	
+	option = {
+		name = news.455.a
+		trigger = {
+			NOT = {
+				TAG = TEX
+				TAG = CAS
+			}
+		}
+	}
+	option = {
+		name = news.455.b
+		trigger = { TAG = TEX }
+	}
+	option = {
+		name = news.455.c
+		trigger = { TAG = CAS }
+	}
+}
