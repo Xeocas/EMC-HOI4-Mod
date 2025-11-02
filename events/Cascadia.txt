@@ -40,3 +40,96 @@ country_event = {
 		}
 	}
 }
+
+# Texas invades California
+country_event = {
+	id = cas.2
+	title = cas.2.t
+	desc = cas.2.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Then it shall be war
+		name = cas.2.a
+		ai_chance = { base = 50 }
+		add_war_support = 0.4
+		add_stability = 0.1
+	}
+
+	option = { # California is not worth the cost of war
+		name = cas.2.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		release = CAL
+	}
+}
+
+# Check Cascadia conquered by Texas (Hidden event)
+country_event = {
+	id = cas.3
+	hidden = yes
+
+	trigger = {
+		tag = CAS
+		has_war_with = TEX
+		has_government = democratic
+		386 = { is_controlled_by = TEX }
+		surrender_progress > 0.9
+		GER = {
+			OR = {
+				is_faction_leader = yes
+				has_government = fascism
+			}
+		}
+		has_civil_war = no
+		#Don't fire if Cascadia has pushed pretty far into TEX
+		NOT = {
+			any_state = {
+				is_on_continent = north_america
+				NOT = { state = 375 }
+				NOT = { state = 1035 }
+				NOT = { state = 1034 }
+				NOT = { state = 388 }
+				is_controlled_by = ROOT
+			}
+		}		
+
+		#Don't fire if any states in France are controlled by a different human player
+		NOT = {
+			any_country = {
+				is_ai = no
+				NOT = { tag = TEX }
+				NOT = { is_in_faction_with = TEX }
+				has_war_with = ROOT
+				any_state = {
+					is_on_continent = north_america
+					NOT = { state = 386 }
+					NOT = { state = 1023 }
+					NOT = { state = 1025 }
+					is_owned_by = ROOT
+					is_controlled_by = PREV
+				}
+			}
+		}
+		# PLEASE Don't fire if this will end the war (No other ally is a major)
+		# FRA = {
+			# any_allied_country = {
+				# is_major = yes 
+				# has_capitulated = no 
+				# has_war_with = GER 
+			# }
+		# }
+	}
+	mean_time_to_happen = { days = 2 }
+	immediate = {
+		country_event = tex.9
+	}
+}
