@@ -1,0 +1,422 @@
+﻿###########################
+# Texas Events
+###########################
+
+add_namespace = tex
+
+# Conquest of Rio Grande
+country_event = {
+	id = tex.1
+	title = tex.1.t
+	desc = tex.1.d
+	picture = GFX_report_event_tanks_mexico_city
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tex.1.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 480 }
+			}
+			transfer_state = 480
+		}
+		if = {
+			limit = {
+				FROM = { controls_state = 479 }
+			}
+			transfer_state = 479
+		}
+
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+		army_experience = 10
+		add_world_tension = 5
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		hidden_effect = {
+			news_event = { hours = 6 id = news.453 }
+		}
+	}
+}
+
+# Mexico refuses
+country_event = {
+	id = tex.2
+	title = tex.2.t
+	desc = tex.2.d
+	picture = GFX_report_event_tanks_mexico_city
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tex.2.a
+
+		add_war_support = 0.05
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_state_claim = 480
+		add_state_claim = 479
+		
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		create_wargoal = {
+			type = take_state_focus
+			target = MEX
+			generator = { 480 479 }
+		}
+	}
+}
+
+# Annexation of Yucatan
+country_event = {
+	id = tex.3
+	title = tex.3.t
+	desc = tex.3.d
+	picture = GFX_report_event_ast_navy
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tex.3.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 474 }
+			}
+			transfer_state = 474
+		}
+	}
+}
+
+# Mexico refuses Yucatan
+country_event = {
+	id = tex.4
+	title = tex.4.t
+	desc = tex.4.d
+	picture = GFX_report_event_ast_navy
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tex.4.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 474 }
+			}
+			transfer_state = 474
+		}
+
+		MEX = {
+			create_wargoal = {
+				type = take_state_focus
+				target = TEX
+				generator = { 474 }
+			}
+		}
+	}
+}
+
+# New Mexico Annexation
+country_event = {
+	id = tex.5
+	title = tex.5.t
+	desc = tex.5.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2026.04.01
+		NMX {
+			has_government = neutrality
+		}
+	}
+	
+	option = {
+		name = tex.5.a
+
+		annex_country = {
+			target = NMX
+			transfer_troops = yes
+		}
+		376 = {
+			add_core_of = ROOT
+		}
+	}
+}
+
+# USA collapse Texas
+country_event = {
+	id = tex.6
+	title = tex.6.t
+	desc = tex.6.d
+	picture = GFX_report_event_spr_civil_war_equipment
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2026.06.01
+		TEX = {
+			has_completed_focus = TEX_affirm_american_claims
+		}
+	}
+	
+	option = {
+		name = tex.6.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 382 }
+			}
+			transfer_state = 382
+		}
+		if = {
+			limit = {
+				FROM = { controls_state = 383 }
+			}
+			transfer_state = 383
+		}
+		if = {
+			limit = {
+				FROM = { controls_state = 384 }
+			}
+			transfer_state = 384
+		}
+		if = {
+			limit = {
+				FROM = { controls_state = 373 }
+			}
+			transfer_state = 373
+		}
+
+		hidden_effect = {
+			news_event = { hours = 12 id = news.454 }
+		}
+	}
+}
+
+# Reformed Cascadia Annexation
+country_event = {
+	id = tex.7
+	title = tex.7.t
+	desc = tex.7.d
+	picture = GFX_report_event_german_troops
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_war_with = CAS
+	}
+	
+	option = {
+		name = tex.7.a
+
+		annex_country = {
+			target = RCA
+			transfer_troops = yes
+		}
+	}
+}
+
+# CMW betrayl
+country_event = {
+	id = tex.8
+	title = tex.8.t
+	desc = tex.8.d
+	picture = GFX_report_event_tur_ataturk_impassioned_speech
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_war_with = CAS
+		has_completed_focus = TEX_the_mexican_gambit
+		has_completed_focus = TEX_eastern_blitz
+		has_completed_focus = TEX_strike_california
+	}
+	
+	option = {
+		name = tex.8.a
+
+		ai_chance = {
+			base = 40
+		}
+
+		create_wargoal = {
+			type = annex_everything
+			target = MEX
+		}
+		MEX = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	option = {
+		name = tex.8.b
+
+		ai_chance = {
+			base = 8
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		add_stability = 0.05
+		MEX = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+}
+
+# Cascadia defeated
+country_event = {
+	id = tex.9
+	title = tex.9.t
+	desc = tex.9.d
+	picture = GFX_report_event_generic_soldiers_surrendering
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tex.9.a
+
+		ai_chance = {
+			base = 40
+		}
+
+		trigger = { has_government = fascism }
+
+		if = {
+			limit = { 377 = { owner = { original_tag = CAS } } }
+			set_state_controller = 377
+		}
+		if = {
+			limit = { 379 = { owner = { original_tag = CAS } } }
+			set_state_controller = 379
+		}
+		if = {
+			limit = { 380 = { owner = { original_tag = CAS } } }
+			set_state_controller = 380
+		}
+		if = {
+			limit = { 1031 = { owner = { original_tag = CAS } } }
+			set_state_controller = 1031
+		}
+		if = {
+			limit = { 1033 = { owner = { original_tag = CAS } } }
+			set_state_controller = 1033
+		}
+		
+		if = {
+			limit = {
+				378 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 378 }
+		}
+		if = {
+			limit = {
+				1024 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1024 }
+		}
+		if = {
+			limit = {
+				1029 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1029 }
+		}
+		if = {
+			limit = {
+				1030 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1030 }
+		}
+
+		RCA = {
+			annex_country = CAS
+		}
+	}
+	option = {
+		name = tex.9.b
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		if = {
+			limit = {
+				378 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 378 }
+		}
+		if = {
+			limit = {
+				1024 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1024 }
+		}
+		if = {
+			limit = {
+				1029 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1029 }
+		}
+		if = {
+			limit = {
+				1030 = {
+					owner = { original_tag = CAS }
+					is_controlled_by = CAL
+				}
+			}
+			CAL = { transfer_state = 1030 }
+		}
+
+		annex_country = CAS
+	}
+}
