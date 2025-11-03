@@ -1,4 +1,4 @@
-﻿capital = 219
+capital = 219
 
 oob = "SOV_1936"
 
@@ -36,11 +36,13 @@ add_to_faction = YUE
 
 set_politics = {
 	ruling_party = communism
-	last_election = "1932.11.8"
-	election_frequency = 48
+	last_election = "2023.12.1"
+	election_frequency = 24
 	elections_allowed = no
 }
 set_popularities = {
 	communism = 90
 	democratic = 10
 }
+
+recruit_character = SOV_probka
