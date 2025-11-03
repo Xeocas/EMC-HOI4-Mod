@@ -74,7 +74,7 @@ ideas = {
 			modifier = {
 				social_democrat_drift = 0.05
 				political_power_gain = 0.05
-				stability_factor = -.10
+				stability_factor = -0.10
 			}
 		}
 
