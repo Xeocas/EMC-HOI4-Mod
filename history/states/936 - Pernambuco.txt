@@ -4,7 +4,7 @@ state = {
 	name = "STATE_936"
 	manpower = 325000 # A third from Rio Grande
 
-	state_category = townw
+	state_category = town
 
 	history = {
 
