@@ -1,4 +1,4 @@
-﻿capital = 576
+capital = 576
 
 oob = "TNG_1936"
 
@@ -31,11 +31,13 @@ set_convoys = 10
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1932.11.8"
-	election_frequency = 48
+	last_election = "2023.11.8"
+	election_frequency = 24
 	elections_allowed = no
 }
 set_popularities = {
 	neutrality = 85
 	democratic = 15
 }
+
+recruit_character = TNG_kxtyusha
