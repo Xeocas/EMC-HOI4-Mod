@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	TNG_kxtyusha = {
+		name = TNG_LEADER_kxtyusha
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TNG_kxtyusha_large
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,32 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	RUS_hafaz = {
+		name = RUS_LEADER_hafaz
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RUS_hafaz_large
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+
+	RUS_goulash = {
+		name = RUS_LEADER_goulash
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RUS_goulash_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

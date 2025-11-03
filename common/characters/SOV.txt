@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	SOV_probka = {
+		name = SOV_LEADER_probka
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_probka_large
+			}
+		}
+		country_leader={
+			ideology=communist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

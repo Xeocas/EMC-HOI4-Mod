@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	JAP_173BIGMAC = {
+		name = JAP_LEADER_173BIGMAC
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_173BIGMAC_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

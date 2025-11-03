@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	KAZ_23don = {
+		name = KAZ_LEADER_23don
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KAZ_23don_large
+			}
+		}
+		country_leader={
+			ideology=oligarchism
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}

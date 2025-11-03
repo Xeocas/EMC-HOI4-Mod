@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	KOR_KenDibnah = {
+		name = KOR_LEADER_KenDibnah
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_KenDibnah_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="2027.1.1.1"
+			id=-1
+		}
+	}
+}
