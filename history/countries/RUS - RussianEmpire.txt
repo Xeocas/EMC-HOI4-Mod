@@ -1,4 +1,4 @@
-﻿capital = 195
+capital = 195
 
 oob = "RUS_1936"
 
@@ -39,11 +39,15 @@ puppet = IND
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1932.11.8"
-	election_frequency = 48
+	last_election = "2023.11.8"
+	election_frequency = 24
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 85
-	democratic = 15
+	neutrality = 55
+	monarchy = 40
+	democratic = 5
 }
+
+recruit_character = RUS_hafaz
+recruit_character = RUS_goulash
