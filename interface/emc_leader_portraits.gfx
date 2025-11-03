@@ -129,4 +129,44 @@ spriteTypes = {
 		name = "GFX_portrait_YUK_tuzzie_large"
 		texturefile = "gfx/leaders/YUK/portrait_YUK_tuzzie.tga"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_SOV_probka_large"
+		texturefile = "gfx/leaders/SOV/portrait_SOV_probka.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_RUS_hafaz_large"
+		texturefile = "gfx/leaders/RUS/portrait_RUS_hafaz.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_RUS_goulash_large"
+		texturefile = "gfx/leaders/RUS/portrait_RUS_goulash.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_TNG_kxtyusha_large"
+		texturefile = "gfx/leaders/TNG/portrait_TNG_kxtyusha.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_KAZ_23don_large"
+		texturefile = "gfx/leaders/KAZ/portrait_KAZ_23don.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_JAP_173BIGMAC_large"
+		texturefile = "gfx/leaders/JAP/portrait_JAP_173BIGMAC.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_RUR_theartofreading_large"
+		texturefile = "gfx/leaders/RUR/portrait_RUR_theartofreading.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_KOR_KenDibnah_large"
+		texturefile = "gfx/leaders/KOR/portrait_KOR_KenDibnah.tga"
+	}
 }
