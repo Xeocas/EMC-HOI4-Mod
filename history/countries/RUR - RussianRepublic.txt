@@ -1,4 +1,4 @@
-﻿capital = 570
+capital = 570
 
 oob = "RUR_1936"
 
@@ -30,12 +30,14 @@ set_technology = {
 set_convoys = 10
 
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1932.11.8"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = democratic
+	last_election = "2023.11.8"
+	election_frequency = 24
+	elections_allowed = yes
 }
 set_popularities = {
-	neutrality = 85
-	democratic = 15
+	democratic = 70
+	neutrality = 30
 }
+
+recruit_character = RUR_theartofreading
