@@ -173,7 +173,7 @@ focus_tree = {
 						add_war_support = 0.05
 						add_stability = 0.05
 						army_experience = 10
-						add_world_tension = 5
+						add_threat = 5
 
 						custom_effect_tooltip = generic_skip_one_line_tt
 												
@@ -289,7 +289,7 @@ focus_tree = {
 			add_war_support = 0.05
 			army_experience = 15
 			navy_experience = 10
-			add_world_tension = 5
+			add_threat = 5
 		}
 	}
 
@@ -425,7 +425,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.05
 			}
-			add_world_tension = 2
+			add_threat = 2
 		}
 	}
 
@@ -463,7 +463,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
-			add_world_tension = 5
+			add_threat = 5
 			add_political_power = 25
 			add_war_support = 0.05
 			add_state_claim = 376
@@ -522,7 +522,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
-			add_world_tension = 20
+			add_threat = 20
 			add_political_power = 50
 			add_war_support = 0.1
 			add_state_claim = 378
@@ -587,7 +587,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			add_world_tension = 10
+			add_threat = 10
 			create_wargoal = {
 				type = annex_everything
 				target = MEX
@@ -632,7 +632,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			add_world_tension = 1
+			add_threat = 1
 			add_state_claim = 372
 			add_state_claim = 367
 			add_state_claim = 371
@@ -683,7 +683,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			add_world_tension = 5
+			add_threat = 5
 			add_state_claim = 315
 			add_state_claim = 690
 			add_state_claim = 693
@@ -741,7 +741,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-			add_world_tension = 5
+			add_threat = 5
 			add_state_claim = 304
 			navy_experience = 5
 			army_experience = 5
