@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # Cascadia Events
 ###########################
 
@@ -37,6 +37,13 @@ country_event = {
   			type = infrastructure
   			state = 1020
   			damage = 2
+		}
+
+		add_idea = CAS_great_north_icerail_crisis
+		remove_idea = CAS_icerails_in_disrepair
+
+		hidden_effect = {
+			set_country_flag = great_north_icerail_crisis
 		}
 	}
 }
@@ -131,5 +138,132 @@ country_event = {
 	mean_time_to_happen = { days = 2 }
 	immediate = {
 		country_event = tex.9
+	}
+}
+
+# Cascadian Rail Union
+country_event = {
+	id = cas.4
+	title = cas.4.t
+	desc = cas.4.d
+	picture = GFX_report_event_generic_train
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # All these libs and their private icerail unions
+		name = cas.4.a
+		damage_building = {
+  			type = infrastructure
+  			state = 471
+  			damage = 2
+		}
+		damage_building = {
+  			type = infrastructure
+  			state = 473
+  			damage = 2
+		}
+
+		add_idea = CAS_rail_union
+		remove_idea = CAS_great_north_icerail_crisis
+	}
+}
+
+# Chapter Closed on Icerail Crisis
+country_event = {
+	id = cas.5
+	title = cas.5.t
+	desc = cas.5.d
+	picture = GFX_report_event_FDR_speech
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # A future problem now
+		name = cas.5.a
+		add_popularity = {
+    		ideology = conservative_democrat
+    		popularity = -0.03
+		}
+		add_popularity = {
+    		ideology = democratic
+    		popularity = 0.02
+		}
+		add_popularity = {
+    		ideology = social_democrat
+    		popularity = 0.01
+		}
+
+		remove_idea = CAS_rail_union
+	}
+}
+
+# The Last Word
+country_event = {
+	id = cas.6
+	title = cas.6.t
+	desc = cas.6.d
+	picture = GFX_report_event_gathering_protest
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # Lets hope this gamble works
+		name = cas.6.a
+		add_political_power = -50
+
+		RCA = {
+			if = {
+				limit = {
+					FROM = { controls_state = 471 }
+				}
+				transfer_state = 471
+			}
+			if = {
+				limit = {
+					FROM = { controls_state = 473 }
+				}
+				transfer_state = 473
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CAS
+			}
+		}
+
+		remove_idea = CAS_rail_union
+		add_idea = CAS_cascgate
+	}
+}
+
+# Euphoria Annexation
+country_event = {
+	id = cas.7
+	title = cas.7.t
+	desc = cas.7.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2025.04.01
+		EUP {
+			has_government = neutrality
+		}
+	}
+	
+	option = {
+		name = cas.7.a
+
+		annex_country = {
+			target = EUP
+			transfer_troops = yes
+		}
+		1033 = {
+			add_core_of = ROOT
+		}
 	}
 }
