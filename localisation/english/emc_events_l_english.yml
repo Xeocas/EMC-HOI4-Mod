@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  news.450.t:0 "Mexico Joins the NAU"
  news.450.d:0 "The nation of Mexico, led by 911Saph, has joined the North American Union."
  news.450.a:0 "The NAU expands further."
@@ -35,6 +35,17 @@
  cas.2.d:0 "Our longtime rivals in Texas, at NorthPaso's command, have invaded our territory in California. Our military leaders believe that war is now inevitable, and that Paso will not be sufficed until all of Cascadia has been destroyed. The nation prepares for war."
  cas.2.a:0 "We shall defend every inch of Cascadia"
  cas.2.b:0 "California is not worth the price of war"
+ cas.4.t:0 "Cascadian Rail Union"
+ cas.4.d:0 "The angered Great North mayors opposed to our intiative are, expectedly, unpleased with our continued persistence. In response, they have formed the Cascadian Rail Union, a private company focused on the operation of the icerails they consider to be theirs. Although mostly positioned in the Great North for now, it is possible that some in California and the Frontier may soon join them."
+ cas.5.t:0 "Chapter closed on Icerail Crisis"
+ cas.5.d:0 "The House voted in favor of kicking Orbit from Cascadia 12-0 in response to his continued agitation of Cascadian both in relation to the Icerail Crisis and other issues. With him gone, the rhetoric around the icerail issue has finally calmed down, although we dare not incite them to rise up again."
+ cas.5.a:0 "A future problem now"
+ cas.6.t:0 "The Last Word"
+ cas.6.d:0 "Drastic action has been taken to implement the government's icerail policy, which has now undertaken the old CascGate moniker. An ultimatum has been issued to the Cascadian Rail Union and its members. Hand over control of the icerails, or not only be fined but lose any future support from the government, including a revocation of all CascAID welfare."
+ cas.6.a:0 "Lets hope this gamble works"
+ cas.7.t:0 "Euphoria Annexed"
+ cas.7.d:0 "The desert nation of Euphoria, led by veteran player RawrYOUTUBE, has collapsed, and what was left of its membership has voluntarily joined Cascadia!"
+ cas.7.a:0 "The beacon of liberty shines further!"
 
  mex.1.t:0 "Offer to join NAU"
  mex.1.d:0 "We have been offered the chance to join the North American Union by the USA. Although this may impede on our soverignty, it would greatly improve our current security situation and strengthen our alliances."
@@ -92,4 +103,14 @@
  tex.9.d:0 "After strong resistance around Olympia and Montana, the last of the Cascadian forces have surrendered. Now it is our time to decide the future of the American West."
  tex.9.a:0 "Empower Reformed Cascadia"
  tex.9.b:0 "Texas shall conquer all"
+ tex.10.t:0 "Wagner Collapses"
+ tex.10.d:0 "With little success in the crusade against Cascadia, the Wanger alliance has collapsed."
+ tex.10.a:0 "We will strike again"
+
+ ver.1.t:0 "Expansion into New York"
+ ver.1.d:0 "Mayors across New England and the Mid-Atlantic regions have begun to move towards Vermont as the new powerhouse of the East Coast!"
+ ver.1.a:0 "Vermont grows!"
+ ver.2.t:0 "Eastern Seaboard Expansion"
+ ver.2.d:0 "Towns as far south as Georgia and even approaching Florida have begun to move to Vermont!"
+ ver.2.a:0 "Vermont grows!"
  
