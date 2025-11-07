@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  CAS: "Cascadia"
  CAS_DEF: "the Republic of Cascadia"
  CAS_ADJ: "Cascadian"
@@ -335,6 +335,8 @@
  BEN_DEF: "Benin"
  BEN_ADJ: "Beninian"
  CHA: "Chad"
+ CHA_fascism: "Chad"
+ CHA_fascism_DEF: "Chad"
  CHA_DEF: "Chad"
  CHA_ADJ: "Chadian"
  SOM: "Somalia"
