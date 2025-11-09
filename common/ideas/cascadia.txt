@@ -23,6 +23,7 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.3
 				army_core_defence_factor = 0.05
+				political_power_gain = 0.25
 			}
 		}
 
@@ -74,7 +75,7 @@ ideas = {
 			modifier = {
 				social_democrat_drift = 0.05
 				political_power_gain = 0.05
-				stability_factor = -0.10
+				stability_factor = -.10
 			}
 		}
 
@@ -101,6 +102,147 @@ ideas = {
 				army_org_factor = -0.1
 				conscription_factor = -0.1
 				experience_gain_army_factor = -0.2
+			}
+		}
+
+		CAS_great_north_icerail_crisis = {
+			picture = SOV_the_road_of_life
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				conservative_democrat_drift = 0.03
+				fascism_drift = 0.01
+				production_speed_infrastructure_factor = -0.5
+				production_speed_supply_node_factor = -0.8
+				political_power_gain = -0.1
+			}
+		}
+
+		CAS_icerails_in_disrepair = {
+			picture = generic_train_tracks
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = -0.20
+				production_speed_supply_node_factor = -0.40
+				political_power_gain = -0.05
+			}
+		}
+
+		CAS_federated_icerails = {
+			picture = generic_railroads
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = -0.1
+				production_speed_supply_node_factor = -0.2
+				political_power_gain = 0.1
+				conservative_democrat_drift = 0.01
+			}
+		}
+
+		CAS_rail_union = {
+			picture = USA_union_pacific_railway
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.12
+				conservative_democrat_drift = 0.05
+				fascism_drift = 0.02
+				production_speed_infrastructure_factor = -0.6
+				production_speed_supply_node_factor = -0.9
+				political_power_gain = -0.3
+			}
+		}
+
+		CAS_cascgate = {
+			picture = ARG_invest_in_railways
+			
+			allowed = {
+				tag = CAS
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				conservative_democrat_drift = 0.3
+				fascism_drift = 0.3
+				production_speed_infrastructure_factor = 0.75
+				production_speed_supply_node_factor = 1.50
+				political_power_gain = -0.1
 			}
 		}
 	}
