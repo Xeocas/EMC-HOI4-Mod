@@ -1,0 +1,77 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### PACIFIC FLEET #####
+	fleet = {
+		name = "Battle Force"			
+		naval_base = 7386 # Seattle
+		task_force = {				
+			name = "Battleships, Battle Force"
+			location = 7386 # Seattle
+			### Battleship Division 1 ###			
+			ship = { name = "CNS Washington" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }				
+			ship = { name = "CNS Oregion" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }				
+			ship = { name = "CNS Vancouver" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }				
+			### Battleship Division 2 ###			
+			ship = { name = "CNS Frontier" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }				
+			ship = { name = "CNS Idaho" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }				
+			ship = { name = "CNS Alberta" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CAS version_name = "Pennsylvania Class" } } }		
+		}				
+		task_force = {					
+			name = "Carrier Division, Battle Force"		
+			location = 7386 # Seattle
+			ship = { name = "CNS Seattle" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = CAS version_name = "Ranger Class" } } 
+				
+			}
+		}					
+		task_force = {					
+			name = "Cruisers, Battle Force"
+			location = 1408 # Vancouver
+			ship = { name = "CNS Olympia" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAS version_name = "New Orleans Class" } } }				
+			ship = { name = "CNS Astoria" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAS version_name = "New Orleans Class" } } }				
+			ship = { name = "CNS Portland" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CAS version_name = "New Orleans Class" } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 7386 # Seattle	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "CNS Victoria" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Port McNiel" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Vamp" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Sayer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			# 2nd Destroyer Division		
+			ship = { name = "CNS Esti" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Lost Coast" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Passage Bay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Irvine" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			# 3rd Destroyer Division				
+			ship = { name = "CNS Jerhico" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Cheeseball" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Akeboun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+			ship = { name = "CNS Milgorn" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = CAS version_name = "Clemson Class" } } }		
+		}			
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 1562 # Irvine
+		task_force = {					
+			name = "1st Submarine Squadron"			
+			location = 1562 # Irvine
+			# 1st Submarine Division				
+			ship = { name = "CNS S-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+			ship = { name = "CNS S-35" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = CAS version_name = "S Class" } } }
+		}
+	}
+} 
+
+#####################

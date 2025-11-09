@@ -1,0 +1,57 @@
+﻿	
+	
+air_wings = {
+	### 1 CAF Wing -- Jeffcadia
+	1024 = {
+		medium_plane_airframe_0 = {
+			owner = "USA" 
+			amount = 60
+			version_name = "B-6A"
+		}
+		small_plane_cas_airframe_0 = {
+			owner = "USA" 
+			amount = 50
+			version_name = "A-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 100
+			version_name = "P-26A"
+		}
+	}
+
+	### 2 CAF Wing -- Washington
+	386 = {
+		medium_plane_airframe_0 = {
+			owner = "USA" 
+			amount = 24
+			version_name = "B-6A"
+		}
+		small_plane_cas_airframe_0 = {
+			owner = "USA" 
+			amount = 60
+			version_name = "A-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 150
+			version_name = "P-26A"
+		}
+	}
+
+	### 3 CAF Wing -- Johnstone Strait
+	1020 = {
+		small_plane_cas_airframe_0 = {
+			owner = "USA" 
+			amount = 30
+			version_name = "A-12"
+		}
+		small_plane_airframe_0 =  {
+			owner = "USA" 
+			amount = 75
+			version_name = "P-26A"
+		}
+	}
+}
+
+#####################

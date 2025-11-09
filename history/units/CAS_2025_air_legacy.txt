@@ -1,0 +1,49 @@
+﻿	
+	
+air_wings = {
+	### 1 CAF Wing -- Jeffcadia
+	1024 = {
+		tac_bomber_equipment_0 = {
+			owner = "USA" 
+			amount = 60
+		}
+		CAS_equipment_1 = {
+			owner = "USA" 
+			amount = 50
+		}
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 100
+		}
+	}
+
+	### 2 CAF Wing -- Washington
+	386 = {
+		tac_bomber_equipment_0 = {
+			owner = "USA" 
+			amount = 24
+		}
+		CAS_equipment_1 = {
+			owner = "USA" 
+			amount = 60
+		}
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 150
+		}
+	}
+
+	### 3 CAF Wing -- Johnstone Strait
+	1020 = {
+		CAS_equipment_1 = {
+			owner = "USA" 
+			amount = 30
+		}
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 75
+		}
+	}
+}
+
+#####################
