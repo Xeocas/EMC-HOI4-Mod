@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
  VICTORY_POINTS_TOOLTIP:0 "§G$NAME$§! victory points = §Y$POINTS$§!"
  VICTORY_POINTS_6521:0 "Berlin"
  VICTORY_POINTS_692:0 "Munich"
@@ -547,7 +547,7 @@
  VICTORY_POINTS_788:0 "Norfolk"
  VICTORY_POINTS_853:0 "Phoenix"
  VICTORY_POINTS_4799: "Las Vegas"
- VICTORY_POINTS_1562:0 "San Diego"
+ VICTORY_POINTS_1562:0 "Irvine"
  VICTORY_POINTS_1595:0 "Indianapolis"
  VICTORY_POINTS_1690:0 "Spokane"
  VICTORY_POINTS_1770:0 "Des Moines"
@@ -1827,7 +1827,6 @@
  VICTORY_POINTS_4445:0 "Vermont"
  VICTORY_POINTS_10995:0 "Antarctica"
  VICTORY_POINTS_2165:0 "Origin"
-
 
 
 
