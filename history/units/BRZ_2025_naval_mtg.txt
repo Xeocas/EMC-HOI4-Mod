@@ -1,0 +1,68 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### ATLANTIC FLEET #####
+	fleet = {
+		name = "South Atlantic Fleet"			
+		naval_base = 10980 # Rio
+		task_force = {				
+			name = "Battleships, Battle Force"
+			location = 10980 # Rio
+			### Battleship Division 1 ###			
+			ship = { name = "BRS Olivio" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = BRZ } } }				
+		}				
+		task_force = {					
+			name = "Cruisers, Battle Force"
+			location = 10980 # Rio
+			ship = { name = "BRS Rio de Janiero" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = BRZ } } }				
+			ship = { name = "BRS Americas" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = BRZ } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 10980 # Rio	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "BRS Amazona" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Sao Paulo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Leonicomil" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Bahia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			# 2nd Destroyer Division		
+			ship = { name = "BRS Mehinaku" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Europe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Natal" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Recife" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+		}			
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Caribbean Flotilla"				
+			location = 4982 # Guyana	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "BRS Carib" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Leeward" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Columbia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+			ship = { name = "BRS Grande" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
+		}			
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 10447 # I
+		task_force = {					
+			name = "1st Submarine Squadron"			
+			location = 10447 # I
+			# 1st Submarine Division				
+			ship = { name = "CNS S-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+			ship = { name = "CNS S-18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+			ship = { name = "CNS S-23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+			ship = { name = "CNS S-27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+			ship = { name = "CNS S-28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+			ship = { name = "CNS S-34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = BRZ } } }
+		}
+	}
+} 
+
+#####################

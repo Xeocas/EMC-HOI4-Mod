@@ -1,0 +1,31 @@
+﻿	
+	
+air_wings = {
+	944 = {
+		tac_bomber_equipment_0 = {
+			owner = "BRZ" 
+			amount = 100
+		}
+		CAS_equipment_1 = {
+			owner = "BRZ" 
+			amount = 150
+		}
+		fighter_equipment_0 =  {
+			owner = "BRZ" 
+			amount = 200
+		}
+	}
+
+	492 = {
+		CAS_equipment_1 = {
+			owner = "BRZ" 
+			amount = 40
+		}
+		fighter_equipment_0 =  {
+			owner = "BRZ" 
+			amount = 90
+		}
+	}
+}
+
+#####################

@@ -1,0 +1,184 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = BRZ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"  
+	division_names_group = BRZ_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0}
+		cavalry = { x = 1 y = 1}
+		cavalry = { x = 1 y = 2}
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armored Division"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2}
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2}
+	}
+}
+
+
+units = {
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12987
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12987
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 1944
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 5166
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 10447
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 10447
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 1585
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 5168
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 10934
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4589
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 8181
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10513
+		division_template = "Armored Division"
+		start_experience_factor = 0.10
+		start_equipment_factor = 1.0
+	}
+}

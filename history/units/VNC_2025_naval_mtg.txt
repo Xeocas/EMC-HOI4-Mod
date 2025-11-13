@@ -1,0 +1,74 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### MEDITERANEAN FLEET #####
+	fleet = {
+		name = "Mediteranean Fleet"			
+		naval_base = 11584 # Venice
+		task_force = {				
+			name = "Battleships, Battle Force"
+			location = 11584 # Venice
+			### Battleship Division 1 ###			
+			ship = { name = "VRN Venetia" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = VNC } } }				
+			ship = { name = "VRN Italia" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = VNC } } }				
+			ship = { name = "VRN CorruptedGreed" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = VNC } } }				
+		}				
+		task_force = {					
+			name = "Carrier Division, Battle Force"		
+			location = 11584 # Venice
+			ship = { name = "VRN Fix" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = VNC } } 
+				
+			}
+		}					
+		task_force = {					
+			name = "Cruisers, Battle Force"
+			location = 11584 # Venice
+			ship = { name = "VRN Juliet" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = VNC } } }				
+			ship = { name = "VRN Romeo" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = VNC } } }				
+			ship = { name = "VRN Rome" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = VNC } } }				
+			ship = { name = "VRN Imperator" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = VNC } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 11584 # Venice	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "VRN Naples" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Alps" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Motherland" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Balkans" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			# 2nd Destroyer Division		
+			ship = { name = "VRN East" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN West" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN North" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN South" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			# 3rd Destroyer Division				
+			ship = { name = "VRN Gaul" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Brittania" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Anatolia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+			ship = { name = "VRN Levant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = VNC } } }		
+		}			
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 6626 # Triste
+		task_force = {					
+			name = "1st Submarine Squadron"			
+			location = 6626 # Triste
+			# 1st Submarine Division				
+			ship = { name = "VRN S-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+			ship = { name = "VRN S-35" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = VNC } } }
+		}
+	}
+} 
+
+#####################

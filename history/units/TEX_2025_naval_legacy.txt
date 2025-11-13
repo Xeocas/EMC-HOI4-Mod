@@ -1,0 +1,57 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### GULF FLEET #####
+	fleet = {
+		name = "Rio Grande Force"			
+		naval_base = 10337 # Houston
+		task_force = {				
+			name = "Battleships Division"
+			location = 10337 # Houston
+			### Battleship Division 1 ###			
+			ship = { name = "RTS Texas" definition = battleship equipment = { battleship_1 = { amount = 1 owner = TEX } } }				
+		}				
+		task_force = {					
+			name = "Cruisers Division"
+			location = 10337 # Houston
+			ship = { name = "RTS Houston" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = TEX } } }				
+			ship = { name = "RTS Dallas" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = TEX } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 10337 # Houston	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "RTS Rio Grande" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			ship = { name = "RTS Paso" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			ship = { name = "RTS Moe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			# 2nd Destroyer Division		
+			ship = { name = "RTS Sometexan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			ship = { name = "RTS Fort Worth" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			ship = { name = "RTS Gulf of America" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+			ship = { name = "RTS Austin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = TEX } } }		
+		}			
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 10337 # Houston
+		task_force = {					
+			name = "1st Submarine Squadron"			
+			location = 10337 # Houston
+			# 1st Submarine Division				
+			ship = { name = "RTS S-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+			ship = { name = "RTS S-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = TEX } } }
+		}
+	}
+} 
+
+#####################

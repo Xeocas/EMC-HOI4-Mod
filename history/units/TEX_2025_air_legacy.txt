@@ -1,0 +1,20 @@
+﻿	
+	
+air_wings = {
+	1035 = {
+		tac_bomber_equipment_0 = {
+			owner = "TEX" 
+			amount = 60
+		}
+		CAS_equipment_1 = {
+			owner = "TEX" 
+			amount = 80
+		}
+		fighter_equipment_0 =  {
+			owner = "TEX" 
+			amount = 120
+		}
+	}
+}
+
+#####################

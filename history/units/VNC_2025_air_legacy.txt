@@ -1,0 +1,31 @@
+﻿	
+	
+air_wings = {
+	169 = {
+		tac_bomber_equipment_0 = {
+			owner = "VNC" 
+			amount = 70
+		}
+		CAS_equipment_1 = {
+			owner = "VNC" 
+			amount = 200
+		}
+		fighter_equipment_0 =  {
+			owner = "VNC" 
+			amount = 220
+		}
+	}
+
+	160 = {
+		CAS_equipment_1 = {
+			owner = "VNC" 
+			amount = 80
+		}
+		fighter_equipment_0 =  {
+			owner = "VNC" 
+			amount = 140
+		}
+	}
+}
+
+#####################
