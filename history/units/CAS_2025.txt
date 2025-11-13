@@ -1,5 +1,6 @@
-﻿division_template = {
+division_template = {
 	name = "District Militia"
+	division_names_group = CAS_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -19,6 +20,7 @@
 
 division_template = {
 	name = "Cavalry Division"  
+	division_names_group = CAS_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -250,4 +252,5 @@ units = {
 		start_experience_factor = 0.60
 		start_equipment_factor = 1.0
 	}
+
 }
