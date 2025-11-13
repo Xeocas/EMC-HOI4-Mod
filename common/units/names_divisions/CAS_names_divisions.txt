@@ -62,3 +62,27 @@ CAS_INF_01 =
 		15 = { "%dth 'Frontier' Militia" }
 	}
 }
+
+CAS_CAV_01 = 
+{
+	name = "Cavalry Division"
+
+	for_countries = { CAS }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CAS_CAV_01 }
+
+	fallback_name = "%d Cavalry Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		
+	}
+}
+
