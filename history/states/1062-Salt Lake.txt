@@ -1,0 +1,33 @@
+state={
+	id=1062
+	name="STATE_1062"
+
+	state_category = town
+	
+	resources={
+		tungsten=26
+	}
+
+	history={
+		owner = UTH
+		add_core_of = UTH
+		add_core_of = JEF
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			4865 5 
+		}
+	}
+
+	provinces={
+		10582 1663 10651 4865 4668 13153
+	}
+
+	manpower=950000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,42 @@
+state={
+	id=1058
+	name="STATE_1058"
+
+	state_category = large_city
+	
+	resources={
+		oil=80
+		aluminium=1
+	}
+
+	history={
+		owner = NRC
+		add_core_of = JEF
+		add_core_of = CAL
+		add_core_of = NRC
+		add_claim_by = CAS
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 8
+			9671 = {
+				naval_base = 3
+			}
+		}
+		
+		victory_points = {
+			9671 25
+		}
+	}
+	
+	provinces={
+		9671 3677 6694 1432 1601 6699 3678
+	}
+
+	manpower=3300000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

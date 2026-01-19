@@ -1,0 +1,32 @@
+state={
+	id=1066
+	name="STATE_1066"
+
+	resources={
+		steel=5
+	}
+
+	state_category = metropolis
+
+	history={
+		owner = LAU
+		add_core_of = VER
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			4445 30 
+		}
+	}
+
+	provinces={
+		4445 9675 3715 3712 733 10481 7629 13158
+	}
+
+	manpower=1300000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

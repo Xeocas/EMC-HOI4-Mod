@@ -1,0 +1,27 @@
+state={
+	id=1049
+	name="STATE_1049"
+	resources={
+		oil=1
+	}
+
+	history={
+		owner = CAS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = CAS
+		add_core_of = RCA
+	}
+
+	provinces={
+		7820 12578 7677 7753 7853 4343 7761 4877
+	}
+
+	manpower=1100000
+	buildings_max_level_factor=1.000
+	state_category = town
+
+	local_supplies=4.0
+}

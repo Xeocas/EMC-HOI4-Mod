@@ -1,0 +1,38 @@
+state={
+	id=1068
+	name="STATE_1068"
+
+	resources={
+		tungsten=1
+	}
+
+	state_category = town
+
+	history={
+		owner = NZL
+		add_core_of = NZL
+		add_core_of = HAV
+
+		buildings = {
+			infrastructure = 1
+			2197 = {
+				naval_base = 1
+			}
+		}
+
+		victory_points = {
+			2197 4 
+		}
+		victory_points = {
+			12632 3 
+		}
+	}
+
+	provinces={
+		12632 4819 7839 2197 8204 10650
+	}
+
+	manpower=524000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,29 @@
+state={
+	id=1056
+	name="STATE_1056"
+
+	state_category = large_town
+
+	history={
+		owner = CAS
+		add_core_of = CAS
+		add_core_of = RCA
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			3513 5 
+		}
+	}
+
+	provinces={
+		3513 4328 528 11495 505 11733 3471 10151 4274 7398 12183
+	}
+
+	manpower=900000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
