@@ -6,9 +6,8 @@ state={
 	}
 
 	history={
-		owner = PRC
-		add_core_of = PRC
-		add_core_of = CHI
+		owner = MIN
+		add_core_of = MIN
 		buildings = {
 			infrastructure = 1
 		}
@@ -21,7 +20,7 @@ state={
 	provinces={
 		1458 7314 7659 
 	}
-	manpower = 1057400
+	manpower = 10574
 	buildings_max_level_factor = 1.000
 	state_category = town
 

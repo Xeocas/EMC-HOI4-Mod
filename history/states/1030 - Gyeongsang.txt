@@ -2,7 +2,7 @@ state = {
 
 	id = 1030
 	name = "STATE_1030"
-	manpower = 4761368
+	manpower = 476136
 	
 	state_category = town
 
@@ -11,7 +11,7 @@ state = {
 
 	history = {
 
-		owner = JAP
+		owner = KOR
 		add_core_of = KOR
 
 		buildings = {

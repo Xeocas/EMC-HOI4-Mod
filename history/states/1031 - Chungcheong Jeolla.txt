@@ -2,7 +2,7 @@ state = {
 
 	id = 1031
 	name = "STATE_1031"
-	manpower = 3761368
+	manpower = 376136
 	
 	state_category = rural
 
@@ -11,7 +11,7 @@ state = {
 
 	history = {
 
-		owner = JAP
+		owner = KOR
 		add_core_of = KOR
 
 		buildings = {

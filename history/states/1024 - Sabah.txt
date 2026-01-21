@@ -3,7 +3,7 @@ state = {
 	id = 1024
 	name = "STATE_1024"
 
-	manpower = 329800
+	manpower = 32000
 
 	resources = {
 		rubber = 20
@@ -13,9 +13,8 @@ state = {
 
 	history = {
 
-		owner = MAL
-		add_core_of = MAL
-		add_core_of = SAB
+		owner = IDC
+		add_core_of = IDC
 
 		victory_points = {
 			10199 2 # Sandakan

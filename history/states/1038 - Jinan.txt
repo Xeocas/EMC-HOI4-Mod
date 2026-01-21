@@ -2,7 +2,7 @@ state = {
 
 	id = 1038
 	name = "STATE_1038"
-	manpower = 25582133
+	manpower = 2500000
 	state_category = rural
 	
 	resources = {
@@ -11,19 +11,9 @@ state = {
 	
 	history = {
 
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = MIN
+		add_core_of = MIN
 
-		1936.1.1 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				transfer_state_to = SND
-				add_core_of = SND
-			}
-		}
 
 		victory_points = {
 			1069 5 # Jinan
@@ -37,16 +27,6 @@ state = {
 			infrastructure = 2
 			industrial_complex = 1
 			air_base = 3
-		}
-
-		1938.10.25 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-			}	
-			owner = CHI
-			controller = JAP		
 		}
 	}
 

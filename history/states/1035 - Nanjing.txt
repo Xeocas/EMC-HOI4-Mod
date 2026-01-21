@@ -1,16 +1,15 @@
 state = {
 	id = 1035
 	name = "STATE_1035"
-	manpower = 8652549
+	manpower = 865500
 	state_category = large_town
 	resources = {
 
 	}
 
 	history = {
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = MIN
+		add_core_of = MIN
 
 		buildings = {
 			infrastructure = 2	
