@@ -179,7 +179,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			
-			1020 = {
+			1050 = {
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -299,7 +299,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 10
 			
-			1020 = {
+			1050 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -354,7 +354,7 @@ focus_tree = {
 				}	
 			}
 			
-			1019 = {
+			1049 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1

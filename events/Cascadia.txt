@@ -35,7 +35,7 @@ country_event = {
 		}
 		damage_building = {
   			type = infrastructure
-  			state = 1020
+  			state = 1050
   			damage = 2
 		}
 
@@ -102,8 +102,8 @@ country_event = {
 			any_state = {
 				is_on_continent = north_america
 				NOT = { state = 375 }
-				NOT = { state = 1035 }
-				NOT = { state = 1034 }
+				NOT = { state = 1065 }
+				NOT = { state = 1064 }
 				NOT = { state = 388 }
 				is_controlled_by = ROOT
 			}
@@ -119,8 +119,8 @@ country_event = {
 				any_state = {
 					is_on_continent = north_america
 					NOT = { state = 386 }
-					NOT = { state = 1023 }
-					NOT = { state = 1025 }
+					NOT = { state = 1053 }
+					NOT = { state = 1055 }
 					is_owned_by = ROOT
 					is_controlled_by = PREV
 				}
@@ -262,7 +262,7 @@ country_event = {
 			target = EUP
 			transfer_troops = yes
 		}
-		1033 = {
+		1063 = {
 			add_core_of = ROOT
 		}
 	}

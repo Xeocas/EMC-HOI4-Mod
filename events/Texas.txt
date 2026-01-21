@@ -320,12 +320,12 @@ country_event = {
 			set_state_controller = 380
 		}
 		if = {
-			limit = { 1031 = { owner = { original_tag = CAS } } }
-			set_state_controller = 1031
+			limit = { 1061 = { owner = { original_tag = CAS } } }
+			set_state_controller = 1061
 		}
 		if = {
-			limit = { 1033 = { owner = { original_tag = CAS } } }
-			set_state_controller = 1033
+			limit = { 1063 = { owner = { original_tag = CAS } } }
+			set_state_controller = 1063
 		}
 		
 		if = {
@@ -339,30 +339,30 @@ country_event = {
 		}
 		if = {
 			limit = {
-				1024 = {
+				1054 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1024 }
+			CAL = { transfer_state = 1054 }
 		}
 		if = {
 			limit = {
-				1029 = {
+				1059 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1029 }
+			CAL = { transfer_state = 1059 }
 		}
 		if = {
 			limit = {
-				1030 = {
+				1060 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1030 }
+			CAL = { transfer_state = 1060 }
 		}
 
 		RCA = {
@@ -391,30 +391,30 @@ country_event = {
 		}
 		if = {
 			limit = {
-				1024 = {
+				1054 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1024 }
+			CAL = { transfer_state = 1054 }
 		}
 		if = {
 			limit = {
-				1029 = {
+				1059 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1029 }
+			CAL = { transfer_state = 1059 }
 		}
 		if = {
 			limit = {
-				1030 = {
+				1060 = {
 					owner = { original_tag = CAS }
 					is_controlled_by = CAL
 				}
 			}
-			CAL = { transfer_state = 1030 }
+			CAL = { transfer_state = 1060 }
 		}
 
 		annex_country = CAS

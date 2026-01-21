@@ -514,9 +514,9 @@ focus_tree = {
 				}
 				CAL = {
 					owns_state = 378
-					owns_state = 1024
-					owns_state = 1029
-					owns_state = 1030
+					owns_state = 1054
+					owns_state = 1059
+					owns_state = 1050
 				}
 			}
 		}
@@ -530,13 +530,13 @@ focus_tree = {
 			add_political_power = 50
 			add_war_support = 0.1
 			add_state_claim = 378
-			add_state_claim = 1024
-			add_state_claim = 1029
-			add_state_claim = 1030
+			add_state_claim = 1054
+			add_state_claim = 1059
+			add_state_claim = 1050
 			create_wargoal = {
 				type = take_state_focus
 				target = CAS
-				generator = { 378 1024 1029 1030 }
+				generator = { 378 1054 1059 1050 }
 			}
 			puppet = CAL
 			puppet = RCA
@@ -880,7 +880,7 @@ focus_tree = {
 
 		available = {
 			TEX = {
-				owns_state = 1035
+				owns_state = 1065
 			}
 		}
 		
@@ -893,7 +893,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			1035 = {
+			1065 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = infrastructure
@@ -988,7 +988,7 @@ focus_tree = {
 
 		available = {
 			TEX = {
-				owns_state = 1035
+				owns_state = 1065
 			}
 		}
 		
@@ -1001,7 +1001,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			1035 = {
+			1065 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
@@ -1048,7 +1048,7 @@ focus_tree = {
 		available = {
 			TEX = {
 				owns_state = 375
-				owns_state = 1034
+				owns_state = 1064
 			}
 		}
 		
@@ -1068,7 +1068,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			1034 = {
+			1064 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1276,7 +1276,7 @@ focus_tree = {
 
 		available = {
 			TEX = {
-				owns_state = 1035
+				owns_state = 1065
 			}
 		}
 		
@@ -1289,7 +1289,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
-			1035 = {
+			1065 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
@@ -1393,7 +1393,7 @@ focus_tree = {
 
 		available = {
 			TEX = {
-				owns_state = 1035
+				owns_state = 1065
 			}
 		}
 		
@@ -1406,7 +1406,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			1035 = {
+			1065 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = synthetic_refinery
@@ -1559,7 +1559,7 @@ focus_tree = {
 
 		available = {
 			TEX = {
-				owns_state = 1035
+				owns_state = 1065
 			}
 		}
 		
@@ -1572,7 +1572,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			1035 = {
+			1065 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = dockyard
