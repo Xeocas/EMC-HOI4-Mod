@@ -3,6 +3,10 @@ state={
 	id=571
 	name="STATE_571" # Omsk
 	manpower = 118000
+
+	resources = {
+		coal = 1
+	}
 	
 	state_category = town
 	history={

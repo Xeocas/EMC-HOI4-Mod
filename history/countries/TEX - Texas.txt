@@ -1,4 +1,4 @@
-capital = 1000
+capital = 1065
 
 oob = "TEX_2025"
 

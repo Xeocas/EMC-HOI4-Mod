@@ -4,6 +4,10 @@ state = {
 	manpower = 1900000
 	state_category = large_city
 
+	resources = {
+		coal = 1
+	}
+
 	history = {
 		owner = NTL
 		add_core_of = GER

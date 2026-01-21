@@ -5,6 +5,10 @@ state={
 	manpower = 2300000
 	state_category = metropolis
 
+	resources = {
+		coal = 1
+	}
+
 	history={
 		owner = ILI
 		buildings = {

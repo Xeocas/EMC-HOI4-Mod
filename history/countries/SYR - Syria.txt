@@ -1,9 +1,9 @@
-﻿capital = 1038
+﻿capital = 554
 
-oob = "MIN_1936"
+oob = "SYR_1936"
 
 set_research_slots = 2
-set_stability = 0.6
+set_stability = 0.4
 set_war_support = 0.5
 add_command_power = 5
 
@@ -31,11 +31,11 @@ set_convoys = 10
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1932.11.8"
-	election_frequency = 48
+	last_election = "2024.1.1"
+	election_frequency = 12
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 85
-	democratic = 15
+	neutrality = 95
+	democratic = 5
 }
