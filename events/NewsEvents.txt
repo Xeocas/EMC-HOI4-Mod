@@ -153,11 +153,7 @@ news_event = {
 	
 	major = yes
 	
-	trigger = {
-		CAS = {
-			has_war_with = TEX
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = news.455.a
@@ -175,5 +171,35 @@ news_event = {
 	option = {
 		name = news.455.c
 		trigger = { TAG = CAS }
+	}
+}
+
+# Venice conquers Spain
+news_event = {
+	id = news.456
+	title = news.456.t
+	desc = news.456.d
+	picture = GFX_news_event_spr_spanish_civil_war3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.456.a
+		trigger = {
+			NOT = {
+				TAG = VNC
+				TAG = ARN
+			}
+		}
+	}
+	option = {
+		name = news.456.b
+		trigger = { TAG = VNC }
+	}
+	option = {
+		name = news.456.c
+		trigger = { TAG = ARN }
 	}
 }

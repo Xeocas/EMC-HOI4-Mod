@@ -2,10 +2,10 @@ capital = 160
 
 oob = "VNC_2025"
 
-set_research_slots = 2
-set_stability = 0.6
-set_war_support = 0.5
-add_command_power = 5
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0.8
+add_command_power = 10
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -131,6 +131,11 @@ if = {
 }
 
 set_convoys = 10
+
+declare_war_on = {
+	target = SPN
+	type = annex_everything
+}
 
 set_politics = {
 	ruling_party = monarchy

@@ -27,6 +27,10 @@ set_technology = {
 	engine_tech_1 = 1
 }
 
+add_ideas = {
+	SPN_surrendered_nation
+}
+
 set_convoys = 10
 
 set_politics = {

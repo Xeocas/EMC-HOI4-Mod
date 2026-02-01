@@ -255,6 +255,8 @@ ideologies = {
 			}
 			oligarchism = {
 			}
+			theocracy = {
+			}
 		}
 
 		color = { 124 124 124 }

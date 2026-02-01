@@ -35,6 +35,9 @@
  neutrality_noun:0 "Autocracy"
  neutrality_desc:0 "Autocratic State"
  despotism_desc:0 "Autocrats are the sole leaders of their nations, ruling with absolute authority over the affairs of the state."
+ theocracy:0 "Theocracy"
+ theocracy_noun:0 "Theocratic"
+ theocracry_desc:0 "Tehocracts are religious leaders who are also the leaders of nations."
 
  monarchy:0 "Monarchist"
  monarchy_noun:0 "Monarchy"

@@ -26,16 +26,20 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1600 }
 	default = no
 
+	shared_focus = emc_army_effort
+	shared_focus = emc_naval_effort
+	shared_focus = emc_aviation_effort
+
 	focus = {
 		id = CAS_the_setrus_administration
 		icon = CAS_setrus_admin
-		x = 5
+		x = 17
 		y = 0
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -53,9 +57,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			add_political_power = 50
+			add_stability = 0.05
 		}
 	}
 
@@ -67,10 +72,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAS_the_setrus_administration
 
-		cost = 2
+		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -88,13 +93,13 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			
 			378 = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -104,7 +109,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -119,10 +124,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAS_project_fresno_1
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -140,25 +145,74 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_national_sports_act
+		icon = CAS_hockey
+		prerequisite = { focus = CAS_the_setrus_administration }
+		x = -3
+		y = 1
+		relative_position_id = CAS_the_setrus_administration
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 25
+			
+			472 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
 		}
 	}
 
 	focus = {
 		id = CAS_vancouver_emergency_funding_1
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = CAS_national_city_olympia }
+		prerequisite = { focus = CAS_national_sports_act }
 		x = 0
 		y = 1
-		relative_position_id = CAS_national_city_olympia
+		relative_position_id = CAS_national_sports_act
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -176,10 +230,10 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			
-			1050 = {
+			1020 = {
 				add_building_construction = {
 					type = air_base
 					level = 2
@@ -223,50 +277,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CAS_national_sports_act
-		icon = CAS_hockey
-		prerequisite = { focus = CAS_the_setrus_administration }
-		x = -2
-		y = 1
-		relative_position_id = CAS_the_setrus_administration
-
-		cost = 1
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		allow_branch = {
-
-		}
-
-		available = {
-			has_government = democratic
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			add_political_power = 25
-			
-			472 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = CAS_project_vancouver_1
 		icon = GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
 		prerequisite = { focus = CAS_vancouver_emergency_funding_1 }
@@ -274,10 +284,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAS_vancouver_emergency_funding_1
 
-		cost = 2
+		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -295,11 +305,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			add_political_power = 10
 			
-			1050 = {
+			1020 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -307,7 +317,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -323,10 +333,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAS_project_vancouver_1
 
-		cost = 2
+		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -344,7 +354,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			add_political_power = -100
 			CAS = {
@@ -354,7 +364,7 @@ focus_tree = {
 				}	
 			}
 			
-			1049 = {
+			1019 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -365,18 +375,276 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = CAS_cooperate_with_local_officials
+		icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = CAS_icerail_preservation_act }
+		x = 1
+		y = 1
+		relative_position_id = CAS_icerail_preservation_act
+
+		cost = 5
+
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			has_country_flag = great_north_icerail_crisis
+		}
+		
+		bypass = {
+			NOT = {
+				owns_state = 1020
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = -10
+			remove_idea = CAS_great_north_icerail_crisis
+			add_idea = CAS_icerails_in_disrepair
+		}
+	}
+
+	focus = {
+		id = CAS_federate_the_icerails
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		prerequisite = { focus = CAS_cooperate_with_local_officials }
+		x = 0
+		y = 1
+		relative_position_id = CAS_cooperate_with_local_officials
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			has_country_flag = great_north_icerail_crisis
+		}
+		
+		bypass = {
+			NOT = {
+				owns_state = 1020
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = -10
+			remove_idea = CAS_icerails_in_disrepair
+			add_idea = CAS_federated_icerails
+		}
+	}
+
+	focus = {
+		id = CAS_fight_local_officials
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = CAS_icerail_preservation_act }
+		mutually_exclusive = { focus = CAS_cooperate_with_local_officials }
+		x = -2
+		y = 1
+		relative_position_id = CAS_icerail_preservation_act
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			has_country_flag = great_north_icerail_crisis
+		}
+		
+		bypass = {
+			NOT = {
+				owns_state = 1020
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = -40
+			add_popularity = {
+				ideology = conservative_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.01
+			}
+			CAS = {
+				country_event = {
+					id = cas.4
+					hours = 24
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_kick_orbit
+		icon = GFX_SOV_protect_the_white_sea_baltic_canal_ccp_2d_sov_compatibility
+		prerequisite = { focus = CAS_fight_local_officials }
+		x = -1
+		y = 1
+		relative_position_id = CAS_fight_local_officials
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			has_country_flag = great_north_icerail_crisis
+		}
+		
+		bypass = {
+			NOT = {
+				owns_state = 1020
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = -25
+			add_popularity = {
+				ideology = conservative_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.1
+			}
+			CAS = {
+				country_event = {
+					id = cas.5
+					hours = 24
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_cascgate_reborn
+		icon = GFX_focus_generic_road_investment
+		prerequisite = { focus = CAS_fight_local_officials }
+		mutually_exclusive = { focus = CAS_kick_orbit }
+		x = 1
+		y = 1
+		relative_position_id = CAS_fight_local_officials
+
+		cost = 10
+
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			has_country_flag = great_north_icerail_crisis
+		}
+		
+		bypass = {
+			NOT = {
+				owns_state = 1020
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = conservative_democrat
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.3
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+			CAS = {
+				country_event = {
+					id = cas.6
+					hours = 24
+				}
+			}
+		}
+	}
+
 	# Diplo tree
 
 	focus = {
 		id = CAS_na_pact_uf
 		icon = GFX_goal_support_communism
-		x = 9
+		x = 21
 		y = 0
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -399,7 +667,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -431,10 +699,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = CAS_na_pact_uf
 
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 
 		allow_branch = {
@@ -457,12 +725,104 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
 			diplomatic_relation = {
     			country = PAT
     			relation = non_aggression_pact
     			active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_havaiki_alliance
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
+		prerequisite = { focus = CAS_patagonia_na_pact}
+		x = 0
+		y = 1
+		relative_position_id = CAS_patagonia_na_pact
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			HAV = {
+				NOT = { has_war_with = CAS }
+				country_exists = HAV
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			diplomatic_relation = {
+    			country = HAV
+    			relation = non_aggression_pact
+    			active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CAS_ofn_expansion
+		icon = GFX_SOV_call_for_aid_ccp_2d_sov_compatibility
+		prerequisite = { focus = CAS_havaiki_alliance}
+		x = 0
+		y = 1
+		relative_position_id = CAS_havaiki_alliance
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 11
+		}
+
+		allow_branch = {
+
+		}
+
+		available = {
+			has_government = democratic
+			HAV = {
+				NOT = { has_war_with = CAS }
+				country_exists = HAV
+				has_civil_war = no
+			}
+			VER = {
+				NOT = { has_war_with = VER }
+				country_exists = VER
+				has_civil_war = no
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			CAS = {
+				add_to_faction = HAV
+				add_to_faction = VER
 			}
 		}
 	}

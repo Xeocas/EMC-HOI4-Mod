@@ -1,0 +1,24 @@
+###########################
+# Spain Events
+###########################
+
+add_namespace = spn
+
+# Check Spain conquered by Venice (Hidden event)
+country_event = {
+	id = spn.1
+	hidden = yes
+
+	trigger = {
+		tag = SPN
+		has_war_with = VNC
+		surrender_progress > 0.7
+		has_civil_war = no
+	}
+	mean_time_to_happen = { days = 2 }
+	immediate = {
+		hidden_effect = {
+			country_event = vnc.2
+		}
+	}
+}

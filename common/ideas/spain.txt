@@ -1,0 +1,26 @@
+ideas = {
+
+	country = {
+		SPN_surrendered_nation = {
+			
+			allowed = {
+				original_tag = SPN
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = BEL_the_kings_surrender
+			
+			modifier = {
+				political_power_cost = 1.0
+				political_power_gain = -0.5
+				stability_factor = -0.50
+			}
+		}
+	}
+}
