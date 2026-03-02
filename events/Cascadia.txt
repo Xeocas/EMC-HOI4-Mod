@@ -248,12 +248,7 @@ country_event = {
 
 	fire_only_once = yes
 	
-	trigger = {
-		date > 2025.04.01
-		EUP {
-			has_government = neutrality
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = cas.7.a

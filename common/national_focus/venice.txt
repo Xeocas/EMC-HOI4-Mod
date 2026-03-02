@@ -31,15 +31,142 @@ focus_tree = {
 	shared_focus = emc_aviation_effort
 
 	focus = {
-		id = VNC_secure_spain
-		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		id = VNC_claims_on_italy
+		icon = GFX_focus_ITA_greater_italy
 		x = 16
 		y = 0
 
-		cost = 5
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			create_war_goal = {
+				type = annex_everything
+				target = GOA
+			}
+			160 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			736 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_secure_spain
+		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		prerequisite = { focus = VNC_claims_on_italy }
+		x = 1
+		y = 1
+		relative_position_id = VNC_claims_on_italy
+
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
+		}
+
+		available = {
+			owns_state = 167
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.15
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			173 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			167 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_purchase_sicily
+		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		prerequisite = { focus = VNC_secure_spain }
+		x = 0
+		y = 1
+		relative_position_id = VNC_secure_spain
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
 		}
 
 		available = {
@@ -53,28 +180,49 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.15
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
+			if = {
+				limit = {
+					FROM = { controls_state = 115 }
+				}
+				transfer_state = 115
 			}
-			create_war_goal = {
-				type = annex_everything
-				target = SPN
+			115 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
 
+	# Conquests tree
+
 	focus = {
 		id = VNC_war_in_anatolia
 		icon = GFX_focus_generic_aegean_sea_focus
-		prerequisite = { focus = VNC_secure_spain }
+		prerequisite = { focus = VNC_claims_on_italy }
 		x = -1
 		y = 1
-		relative_position_id = VNC_secure_spain
+		relative_position_id = VNC_claims_on_italy
 
 		cost = 5
 
@@ -88,7 +236,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			has_country_flag = VNC_war_with_turkey
 		}
 
 		cancel_if_invalid = yes
@@ -113,51 +261,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = VNC_war_for_italy
-		icon = GFX_focus_ITA_greater_italy
-		prerequisite = { focus = VNC_secure_spain }
-		x = 1
-		y = 1
-		relative_position_id = VNC_secure_spain
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION}
-		completion_reward = {
-			add_war_support = 0.05
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}
-			create_war_goal = {
-				type = annex_everything
-				target = GOA
-			}
-		}
-	}
-
-	focus = {
 		id = VNC_italian_empire
 		icon = GFX_focus_ITA_italian_irredentism
-		prerequisite = { focus = VNC_war_for_italy }
+		prerequisite = { focus = VNC_war_in_anatolia }
 		x = 0
 		y = 1
-		relative_position_id = VNC_war_for_italy
+		relative_position_id = VNC_war_in_anatolia
 
 		cost = 10
 
@@ -250,58 +359,6 @@ focus_tree = {
 			}
 			114 = {
 				add_core_of = ROOT
-			}
-		}
-	}
-
-	# Econonmy tree
-
-	focus = {
-		id = VNC_european_capital
-		icon = GFX_focus_generic_military_industry
-		x = 18
-		y = 0
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_stability = 0.05
-			160 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 4
-					instant_build = yes
-				}
-			}
-			736 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
 			}
 		}
 	}

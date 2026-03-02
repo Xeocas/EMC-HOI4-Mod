@@ -27,11 +27,6 @@
  news.455.a:0 "The crisis escalates"
  news.455.b:0 "Texas shall be victorious!"
  news.455.c:0 "Liberty will prevail!"
- news.456.t:0 "Venice Conquers Spain"
- news.456.d:0 "The leadership of the Spanish Empire have abandoned Europe for new endeavours with the arrival of overclaim. Taking advantage of the situation, Venetian forces have marched into the open nation, and captured nearly the entire nation. Only Aragon remains as the last holdout of Spanish resistance."
- news.456.a:0 "Troubling expansion"
- news.456.b:0 "Hispania is Venetian!"
- news.456.c:0 "Spain shall return!" 
  
  cas.1.t:0 "Great North Icerail Crisis"
  cas.1.d:0 "Several mayors in the Great North have risen up in opposition to the Icerail Preservation Act proposed by Secretary of Interior Moxie a few days ago. They claim that declaring icerails to be under the sole authority of the Department of Interior is unconstitutional, and a violation of their towns rights. Already, the towns of Sullivan Bay, Husky Valley, and Castle John have disconnected their towns from the icerail system and threatened to expand their resistance to the law."
@@ -118,6 +113,8 @@
  ver.2.t:0 "Eastern Seaboard Expansion"
  ver.2.d:0 "Towns as far south as Georgia and even approaching Florida have begun to move to Vermont!"
  ver.2.a:0 "Vermont grows!"
+<<<<<<< Updated upstream
+=======
 
  vnc.1.t:0 "Savoie Offers Annexation"
  vnc.1.d:0 "Our old ally, Savoie, has found itself unable to operate as an independent nation due to recruiting problems and the PR nightmare of its leadership. They have offered to join Venice in exchange for protection."
@@ -126,4 +123,16 @@
  vnc.2.d:0 "Our conquest of Spain is now nearly complete. Only Aragon, where a handful of small mayors have remained active, continues to resist. With tensions growing in Italy and Anatolia, we need to decide where to allocate our resources."
  vnc.2.a:0 "Aragon will fall... eventually"
  vnc.2.b:0 "All of Spain will be ours! Now!"
+ vnc.3.t:0 "Turkey Demands Izmir"
+ vnc.3.d:0 "Turkey has demanded we transfer them the city of Izmir, which they claim as their core territory. Already, the Turkish hordes are gathering on our border."
+ vnc.3.a:0 "If they want war, they may have it"
+ vnc.3.b:0 "We have bigger issues than the Turks"
+
+ tur.1.t:0 "Venice Refuses in Izmir"
+ tur.1.d:0 "The Venetian menace has refused to return our core territory in Izmir! In fact, they've even threatened to overclaim our nation should we attempt to reclaim our land!"
+ tur.1.a:0 "Ready the army!"
+ tur.2.t:0 "Venice Returns Izmir"
+ tur.2.d:0 "Venice, in a show of either goodwill or fear, has returned our territory in Izmir and withdrawn from Anatolia!"
+ tur.2.a:0 "Glory to Turkey!"
+>>>>>>> Stashed changes
  

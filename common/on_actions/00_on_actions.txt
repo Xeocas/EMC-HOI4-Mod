@@ -45,6 +45,38 @@ on_actions = {
 					# 360
 				}
 			}
+			VNC = {
+				country_event = {
+					id = vnc.1
+					days = 800
+					# 800
+				}
+				country_event = {
+					id = vnc.3
+					days = 175
+					# 175
+				}
+			}
+			CAS = {
+				country_event = {
+					id = cas.7
+					days = 1200
+				}
+			}
+			TEX = {
+				country_event = {
+					id = tex.5
+					days = 1150
+				}
+				country_event = {
+					id = tex.6
+					days = 1800
+				}
+				country_event = {
+					id = tex.10
+					days = 90
+				}
+			}
 		}
 		#Setup Colonial Powers
 		effect = {

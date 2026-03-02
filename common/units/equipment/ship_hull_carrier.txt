@@ -225,7 +225,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 2500
+		manpower = 5000
 		naval_dominance_factor = 300
 	}
 
@@ -297,7 +297,7 @@ equipments = {
 			steel = 4
 			chromium = 2
 		}
-		manpower = 2750
+		manpower = 5500
 	}
 
 	#MODERN CARRIER
@@ -376,7 +376,7 @@ equipments = {
 			steel = 5
 			chromium = 3
 		}
-		manpower = 3250
+		manpower = 6500
 	}
 	
 	#MEGA CARRIER - ICE CARRIER - HABAKKUK
@@ -458,7 +458,7 @@ equipments = {
 			steel = 5
 			chromium = 2
 		}
-		manpower = 3000
+		manpower = 6000
 	}
 
 	ship_hull_carrier_conversion_bb = {
@@ -505,7 +505,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 2500
+		manpower = 5000
 	}
 
 	ship_hull_carrier_conversion_ca = {
@@ -546,7 +546,7 @@ equipments = {
 		resources = {
 			steel = 3
 		}
-		manpower = 500
+		manpower = 1000
 	}
 
 	#ESCORT CARRIER
@@ -617,7 +617,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 1250
+		manpower = 2500
 
 		naval_dominance_factor = 175
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers
@@ -718,7 +718,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 2250
+		manpower = 4500
 	}
 
 	carrier_2 = {
@@ -807,7 +807,7 @@ equipments = {
 			steel = 4
 			chromium = 1
 		}
-		manpower = 2500
+		manpower = 5000
 	}
 
 	carrier_3 = {
@@ -854,7 +854,7 @@ equipments = {
 			steel = 4
 			chromium = 2
 		}
-		manpower = 2750
+		manpower = 5500
 	}
 
 	carrier_4 = {
@@ -901,7 +901,7 @@ equipments = {
 			steel = 5
 			chromium = 2
 		}
-		manpower = 3000
+		manpower = 6000
 	}
 
 	modern_carrier = {
@@ -1025,7 +1025,7 @@ equipments = {
 			steel = 5
 			chromium = 2
 		}
-		manpower = 3500				
+		manpower = 7000				
 	}
 
 	mega_carrier = {
@@ -1135,7 +1135,7 @@ equipments = {
 			steel = 5
 			chromium = 2
 		}
-		manpower = 3000
+		manpower = 6000
 	}
 	escort_carrier = {
 		year = 1936
@@ -1224,7 +1224,7 @@ equipments = {
 			chromium = 1
 		}
 
-		manpower = 1250
+		manpower = 2500
 
 		naval_dominance_factor = 2.4
 		naval_weather_penalty_factor = 1 #this value gets -1 before its used so 1.5 will increase the effects of weather penalties by 0.5. this is base value is required for MIO stat modifiers

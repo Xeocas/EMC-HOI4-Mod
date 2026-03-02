@@ -20,6 +20,7 @@ ideas = {
 				political_power_cost = 1.0
 				political_power_gain = -0.5
 				stability_factor = -0.50
+				industrial_capacity_factory = -0.50
 			}
 		}
 	}

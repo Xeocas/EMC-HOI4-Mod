@@ -9,9 +9,8 @@ state = {
 		add_core_of = ALA
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
 		6361 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 	}

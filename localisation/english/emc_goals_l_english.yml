@@ -87,9 +87,13 @@
  TEX_gulf_coast_naval_yards:0 "Gulf Coast Naval Yards"
  TEX_gulf_coast_naval_yards_desc:0 "The Gulf Coast provides an excellent oppurtunity for the expansion of dockyards to grow our fleet."
 
+<<<<<<< Updated upstream
+=======
  BRZ_choosing_a_successor:0 "Choosing a Successor"
  BRZ_choosing_a_successor_desc:0 "With Olivio absent, the remaining Brazilian leadership must choose which path the nation will take going forward."
 
+ VNC_claims_on_italy:0 "Claims on Italy"
+ VNC_claims_on_italy_desc:0 "Our nation is at an all-time peak in activity. The conquest of Hispania is nearly complete. Now is the time to declare our might and prepare to unite Italy under the rule of the Doge!"
  VNC_secure_spain:0 "Secure Spain"
  VNC_secure_spain_desc:0 "With the Spanish Empire in collapse the Iberian peninsula is ripe for the taking."
  VNC_war_in_anatolia:0 "War in Anatolia"
@@ -101,7 +105,7 @@
  VNC_european_capital:0 "European Capital"
  VNC_european_capital_desc:0 "We must develop the capital city of Venice into the most prosperous town in Europe."
 
+>>>>>>> Stashed changes
  emc_army_effort:0 "Army Effort"
  emc_naval_effort:0 "Naval Effort"
  emc_aviation_effort:0 "Aviation Effort"
- 
