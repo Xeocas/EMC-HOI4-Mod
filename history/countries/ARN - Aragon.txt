@@ -1,11 +1,11 @@
-﻿capital = 112
+﻿capital = 166
 
-oob = "POR_1936"
+oob = "ARN_1936"
 
 set_research_slots = 2
-set_stability = 0.6
-set_war_support = 0.5
-add_command_power = 5
+set_stability = 0.5
+set_war_support = 0.8
+add_command_power = 20
 
 # Starting tech
 set_technology = {
@@ -34,6 +34,7 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 85
-	democratic = 15
+	neutrality = 50
+	monarchy = 45
+	democratic = 5
 }
