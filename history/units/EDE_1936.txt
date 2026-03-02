@@ -33,20 +33,6 @@ division_template = {
 	}
 }
 
-division_template = {
-	name = "Armored Division"
-
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 0 y = 2}
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2}
-	}
-}
-
-
 units = {
 	division= {	
 		name = "1st Infantry"
@@ -74,7 +60,7 @@ units = {
 
 	division= {	
 		name = "4th Infantry"
-		location = 1549
+		location = 10804
 		division_template = "Infantry Division"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1.0
