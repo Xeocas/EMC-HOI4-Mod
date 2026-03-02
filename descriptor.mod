@@ -1,4 +1,4 @@
-version="1.3"
+version="1.4.2"
 tags={
 	"Events"
 	"Map"
@@ -7,5 +7,5 @@ tags={
 }
 name="EMC"
 picture="thumbnail.png"
-supported_version="1.16.10"
+supported_version="1.17"
 remote_file_id="3594235116"
