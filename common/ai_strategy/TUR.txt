@@ -1,0 +1,40 @@
+TUR_fight_venice = {
+
+	allowed = {
+		tag = TUR
+	}
+	enable = {
+		country_exists = VNC
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = VNC
+		value = 1000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = VNC
+		value = 500 # strategy >= 500 forces declaration
+	}
+}
+
+VNC_is_bad = {
+	allowed = {
+		tag = TUR
+	}
+
+	enable = {
+		country_exists = VNC
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = VNC
+		value = 100
+	}
+}

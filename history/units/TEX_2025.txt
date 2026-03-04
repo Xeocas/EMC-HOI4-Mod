@@ -34,4 +34,51 @@ division_template = {
 }
 
 units = {
+	division= {	
+		name = "1st Infantry"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "2nd Infantry"
+		location = 3960
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "3rd Infantry"
+		location = 12782
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "4th Infantry"
+		location = 5038
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "5th Infantry"
+		location = 10337
+		division_template = "Infantry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
+
+	division= {	
+		name = "1st Cavalry"
+		location = 10337
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.25
+		start_equipment_factor = 1.0
+	}
 }

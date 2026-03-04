@@ -28,12 +28,14 @@ set_technology = {
 set_convoys = 10
 
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1932.11.8"
-	election_frequency = 48
+	ruling_party = monarchy
+	last_election = "2022.1.1"
+	election_frequency = 24
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 85
-	democratic = 15
+	monarchy = 75
+	democratic = 25
 }
+
+recruit_character = NTL_colt44magnum

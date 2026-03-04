@@ -2,7 +2,7 @@
 	
 air_wings = {
 	### 1 CAF Wing -- Jeffcadia
-	1024 = {
+	1054 = {
 		medium_plane_airframe_0 = {
 			owner = "CAS" 
 			amount = 60
@@ -40,7 +40,7 @@ air_wings = {
 	}
 
 	### 3 CAF Wing -- Johnstone Strait
-	1020 = {
+	1050 = {
 		small_plane_cas_airframe_0 = {
 			owner = "USA" 
 			amount = 30

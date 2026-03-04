@@ -1,0 +1,68 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	##### MEDITERANEAN FLEET #####
+	fleet = {
+		name = "Tyrrhenian Fleet"			
+		naval_base = 6973 # La Spezia
+		task_force = {				
+			name = "Battleships Division"
+			location = 6973 # La Spezia
+			### Battleship Division 1 ###			
+			ship = { name = "GMN Genoa" definition = battleship equipment = { battleship_1 = { amount = 1 owner = GOA } } }				
+			ship = { name = "GMN Italia" definition = battleship  equipment = { battleship_1 = { amount = 1 owner = GOA } } }				
+		}				
+		task_force = {					
+			name = "Cruisers Division"
+			location = 6973 # La Spezia
+			ship = { name = "GMN Savoy" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = GOA } } }				
+			ship = { name = "GMN Sardinia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GOA } } }				
+			ship = { name = "GMN Corsica" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GOA } } }				
+			ship = { name = "GMN Sicily" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = GOA } } }				
+		}					
+		### Destroyer Flotilla 1 ###				
+		task_force = {					
+			name = "Destroyer Flotilla 1"				
+			location = 6973 # La Spezia	
+			### Destroyer Squadron 1 ###				
+			# 1st Destroyer Division				
+			ship = { name = "GMN Napoli" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Two Kingdoms" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Lombardy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Provence" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			# 2nd Destroyer Division		
+			ship = { name = "GMN Mountaineer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Riveria" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Vineyard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Etna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			# 3rd Destroyer Division				
+			ship = { name = "GMN Merchant" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Galeleo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Columbus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+			ship = { name = "GMN Marco Polo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GOA } } }		
+		}			
+	}
+	
+	### SUBMARINE FORCE ###
+	fleet = {
+		name = "Submarine Base Force"			
+		naval_base = 6891 # Sardinia
+		task_force = {					
+			name = "1st Submarine Squadron"			
+			location = 6891 # Sardinia
+			# 1st Submarine Division				
+			ship = { name = "GMN S-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-35" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-36" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+			ship = { name = "GMN S-37" definition = submarine equipment = { submarine_1 = { amount = 1 owner = GOA } } }
+		}
+	}
+} 
+
+#####################

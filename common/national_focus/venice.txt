@@ -68,12 +68,12 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -92,7 +92,7 @@ focus_tree = {
 		id = VNC_secure_spain
 		icon = GFX_focus_generic_attack_nationalist_spain_focus
 		prerequisite = { focus = VNC_claims_on_italy }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = VNC_claims_on_italy
 
@@ -157,7 +157,7 @@ focus_tree = {
 
 	focus = {
 		id = VNC_purchase_sicily
-		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		icon = GFX_focus_generic_purchase_mechanized_equipment
 		prerequisite = { focus = VNC_secure_spain }
 		x = 0
 		y = 1
@@ -220,7 +220,7 @@ focus_tree = {
 		id = VNC_war_in_anatolia
 		icon = GFX_focus_generic_aegean_sea_focus
 		prerequisite = { focus = VNC_claims_on_italy }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = VNC_claims_on_italy
 
@@ -360,6 +360,197 @@ focus_tree = {
 			114 = {
 				add_core_of = ROOT
 			}
+		}
+	}
+
+	## DEMOCRATIC TREE
+
+	focus = {
+		id = VNC_la_serenissima
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 12
+		y = 0
+		mutually_exclusive = { focus = VNC_claims_on_italy }
+
+		cost = 10
+
+		ai_will_do = {
+			base = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+			is_subject = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			white_peace = SPN
+			160 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			736 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				set_country_flag = democratic_venice
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_rally_the_merchants
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = {focus = VNC_la_serenissima}
+		x = 0
+		y = 1
+		relative_position_id = VNC_la_serenissima
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			161 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_overthrow_the_doge
+		icon = GFX_goal_support_democracy
+		prerequisite = {focus = VNC_rally_the_merchants}
+		x = 0
+		y = 1
+		relative_position_id = VNC_rally_the_merchants
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = conservative_democrat
+				popularity = 0.05
+			}
+			VNC = {
+				country_event = {
+					id = vnc.4
+					hours = 24
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_med_pact
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = VNC_overthrow_the_doge }
+		x = 0
+		y = 1
+		relative_position_id = VNC_overthrow_the_doge
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			create_faction = MED
+			add_to_faction = GOA
 		}
 	}
 

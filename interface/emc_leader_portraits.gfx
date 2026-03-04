@@ -169,4 +169,14 @@ spriteTypes = {
 		name = "GFX_portrait_KOR_KenDibnah_large"
 		texturefile = "gfx/leaders/KOR/portrait_KOR_KenDibnah.tga"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_KOR_KenDibnah_large"
+		texturefile = "gfx/leaders/KOR/portrait_KOR_KenDibnah.tga"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_NTL_colt44magnum_large"
+		texturefile = "gfx/leaders/NTL/portrait_NTL_colt44magnum.tga"
+	}
 }

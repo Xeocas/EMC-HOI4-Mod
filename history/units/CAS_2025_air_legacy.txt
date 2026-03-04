@@ -2,7 +2,7 @@
 	
 air_wings = {
 	### 1 CAF Wing -- Jeffcadia
-	1024 = {
+	1054 = {
 		tac_bomber_equipment_0 = {
 			owner = "CAS" 
 			amount = 60
@@ -34,7 +34,7 @@ air_wings = {
 	}
 
 	### 3 CAF Wing -- Johnstone Strait
-	1020 = {
+	1050 = {
 		CAS_equipment_1 = {
 			owner = "CAS" 
 			amount = 30

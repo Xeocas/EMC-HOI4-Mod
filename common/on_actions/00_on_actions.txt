@@ -99,81 +99,6 @@ on_actions = {
 			}
 		}
 	}
-	# country
-	on_new_term_election = {
-		random_events = {
-			100 = usa.6
-			100 = usa.7
-			100 = usa.8
-			100 = usa.9
-			100 = usa.10
-			100 = usa.11
-			100 = usa.12
-		}
-		random_events = {
-			100 = spain.9
-			100 = lar_spain.1
-		}
-		random_events = {
-			100 = election.2
-			100 = election.3
-			100 = election.4
-			100 = election.5
-			100 = election.6
-			100 = election.11
-			100 = election.12
-			100 = election.13
-			100 = election.14
-			100 = election.15
-		}
-	}
-
-	on_daily_SWE = {
-		effect = {
-			if = {
-				limit = {
-					#is_ironman =  = yes
-					original_tag = SWE
-					has_completed_focus = SWE_per_albin_bus
-					divisions_in_state = {
-						state = 141
-						size > 0 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-				}
-				set_variable = { global.achievement_days_since_bus_left_stockholm = 0 }
-		
-			}
-
-			if = {
-				limit = {
-					divisions_in_state = {
-						state = 141
-						size < 1 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-					check_variable = { global.achievement_days_since_bus_left_stockholm < 100 }
-				}
-				add_to_variable = { global.achievement_days_since_bus_left_stockholm = 1 }
-			}
-			
-			if = {
-				limit = {
-					original_tag = SWE
-					has_completed_focus = SWE_per_albin_bus
-					divisions_in_state = {
-						state = 681
-						size > 0 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-
-					check_variable = { global.achievement_days_since_bus_left_stockholm < 19 }
-				}
-
-				set_global_flag = achievement_has_managed_to_travel_to_cape_town_in_18_days
-			}
-		}
-	}
 
 	# Ace pilots
 	# country, FROM = ace
@@ -380,15 +305,6 @@ on_actions = {
 	#on_five_year_pulse = {
 	#
 	#}
-
-	on_border_war_lost = {
-		effect = {
-			owner = {
-				country_event = { id = china.14 }
-				country_event = { id = china.16 }
-			}
-		}
-	}
 
 	# FROM is the faction Leader, ROOT is the country leaving the faction
 	on_leave_faction = {
@@ -900,15 +816,6 @@ on_actions = {
 					ROOT = { tag = CHI }
 				}
 				JAP = { JAP_intervene_in_china_remove = yes }
-			}
-
-			if = {
-				limit = {
-					original_tag = POL
-					has_government = neutrality
-					NOT = { has_completed_focus = POL_fulfil_fifth_of_november }
-				}
-				retire_country_leader = yes
 			}
 			if = {
 				limit = {

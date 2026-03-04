@@ -1,0 +1,143 @@
+VNC_befriend_savoie = {
+
+	allowed = {
+		tag = VNC
+	}
+	enable = {
+		country_exists = SAV
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = SAV
+		value = 100
+	}
+}
+
+VNC_italian_wars = {
+	allowed = {
+		tag = VNC
+	}
+
+	enable = {
+		country_exists = GOA
+	}
+
+	abort = {
+		has_country_flag = democratic_venice
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = GOA
+		value = 1000
+	}
+	ai_strategy = {
+		type = contain
+		id = GOA
+		value = 100
+	}
+}
+
+VNC_italian_deal = {
+	allowed = {
+		tag = VNC
+	}
+
+	enable = {
+		country_exists = GOA
+		has_country_flag = democratic_venice
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = GOA
+		value = 400
+	}
+}
+
+VNC_befriend_NSR = {
+	allowed = {
+		tag = VNC
+	}
+
+	enable = {
+		country_exists = NSR
+		NOT = { has_war_with = NSR }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = NSR
+		value = 100
+	}
+}
+
+VNC_prepare_croatia = {
+	allowed = {
+		tag = VNC
+	}
+
+	enable = {
+		country_exists = CRO
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = CRO
+		value = 300
+	}
+}
+
+VNC_conquer_croatia = {
+	allowed = {
+		tag = VNC
+	}
+
+	enable = {
+		AND = {
+			country_exists = CRO
+			NOT = { has_war = yes }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = CRO
+		value = 500
+	}
+}
+
+VNC_commit_to_spain = {
+	allowed = {
+		tag = VNC
+	}
+	enable = {
+		has_war_with = SPN
+	}
+	abort = {
+		OR = {
+			NOT = { has_war_with = SPN }
+			any_enemy_country = {
+				is_major = yes
+			}
+		}
+	}
+
+	# Ciudad Real
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 175
+		value = 2
+	}
+}

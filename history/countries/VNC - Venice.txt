@@ -130,21 +130,32 @@ if = {
 
 set_convoys = 10
 
+add_ideas = {
+	# Laws
+	low_economic_mobilisation
+	limited_conscription
+}
+
 declare_war_on = {
 	target = SPN
 	type = annex_everything
 }
+create_wargoal = {
+	target = CRO
+	type = annex_everything
+	expire = 200
+}
 
 set_politics = {
 	ruling_party = monarchy
-	last_election = "1932.11.8"
-	election_frequency = 48
-	elections_allowed = no
+	last_election = "2024.1.1"
+	election_frequency = 24
+	elections_allowed = yes
 }
 set_popularities = {
-	monarchy = 75
-	fascism = 20
-	democratic = 5
+	monarchy = 40
+	fascism = 37
+	democratic = 23
 }
 
 recruit_character = VNC_greed

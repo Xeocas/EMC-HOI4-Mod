@@ -22,8 +22,8 @@ bookmarks = {
 			}
 		}
 		
-		"JAP"={
-			history = "JAP_SHADOW_OF_OVERCLAIM_DESC"
+		"NTL"={
+			history = "NTL_SHADOW_OF_OVERCLAIM_DESC"
 			ideology = monarchy
 			ideas = {
 				home_of_the_free

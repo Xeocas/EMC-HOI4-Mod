@@ -1,0 +1,7 @@
+countries = {
+    SOV = {
+        ideas = {
+            # Leave empty to remove all, or add specific ones to keep
+        }
+    }
+}

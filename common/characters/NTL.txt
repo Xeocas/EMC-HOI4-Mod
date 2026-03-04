@@ -1,0 +1,18 @@
+characters={
+	
+	# NATION LEADERS 
+	
+	NTL_colt44magnum = {
+		name = NTL_LEADER_colt44magnum
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NTL_colt44magnum_large
+			}
+		}
+		country_leader={
+			ideology=monarchist
+			expire="1947.1.1.1"
+			id=-1
+		}
+	}
+}

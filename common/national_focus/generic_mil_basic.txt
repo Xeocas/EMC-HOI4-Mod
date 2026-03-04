@@ -29,7 +29,7 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = equipment_effort
+		id = emc_equipment_effort
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = emc_army_effort }
 		x = -1
@@ -60,7 +60,7 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = motorization_effort
+		id = emc_motorization_effort
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = emc_army_effort }
 		bypass = { has_tech = motorised_infantry }
@@ -83,7 +83,7 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = doctrine_effort
+		id = emc_doctrine_effort
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = emc_army_effort }
 		x = 0
@@ -107,12 +107,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = equipment_effort_2
+		id = emc_equipment_effort_ii
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = equipment_effort }
+		prerequisite = { focus = emc_equipment_effort }
 		x = 0
 		y = 2
-		relative_position_id = equipment_effort
+		relative_position_id = emc_equipment_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -138,12 +138,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = mechanization_effort
+		id = emc_mechanization_effort
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = motorization_effort }
+		prerequisite = { focus = emc_motorization_effort }
 		x = 0
 		y = 2
-		relative_position_id = motorization_effort
+		relative_position_id = emc_motorization_effort
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -170,12 +170,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = doctrine_effort_2
+		id = emc_doctrine_effort_ii
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = doctrine_effort }
+		prerequisite = { focus = emc_doctrine_effort }
 		x = 0
 		y = 2
-		relative_position_id = doctrine_effort
+		relative_position_id = emc_doctrine_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -194,12 +194,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = equipment_effort_3
+		id = emc_equipment_effort_iii
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = equipment_effort_2 }
+		prerequisite = { focus = emc_equipment_effort_ii }
 		x = 0
 		y = 2
-		relative_position_id = equipment_effort_2
+		relative_position_id = emc_equipment_effort_ii
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -225,12 +225,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = armor_effort
+		id = emc_armor_effort
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = mechanization_effort }
+		prerequisite = { focus = emc_mechanization_effort }
 		x = 0
 		y = 2
-		relative_position_id = mechanization_effort
+		relative_position_id = emc_mechanization_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -248,14 +248,16 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = special_forces
+		id = emc_special_forces
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = equipment_effort_3 }
-		prerequisite = { focus = doctrine_effort_2 }
-		prerequisite = { focus = armor_effort }
+		prerequisite = { 
+			focus = emc_equipment_effort_iii
+			focus = emc_doctrine_effort_ii
+			focus = emc_armor_effort 
+		}
 		x = 1
 		y = 1
-		relative_position_id = equipment_effort_3
+		relative_position_id = emc_equipment_effort_iii
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -364,10 +366,10 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = fighter_focus
+		id = emc_fighter_focus
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = emc_aviation_effort }
-		mutually_exclusive = { focus = bomber_focus }
+		mutually_exclusive = { focus = emc_bomber_focus }
 		x = -1
 		y = 1
 		relative_position_id = emc_aviation_effort
@@ -389,10 +391,10 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = bomber_focus
+		id = emc_bomber_focus
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = emc_aviation_effort }
-		mutually_exclusive = { focus = fighter_focus }
+		mutually_exclusive = { focus = emc_fighter_focus }
 		x = 1
 		y = 1
 		relative_position_id = emc_aviation_effort
@@ -414,9 +416,9 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = aviation_effort_2
+		id = emc_aviation_effort_ii
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = bomber_focus focus = fighter_focus }
+		prerequisite = { focus = emc_bomber_focus focus = emc_fighter_focus }
 		x = -1
 		y = 1
 		relative_position_id = bomber_focus
@@ -503,13 +505,15 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = CAS_effort
+		id = emc_CAS_effort
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = motorization_effort }
+		prerequisite = { 
+			focus = emc_aviation_effort_ii
+			focus = emc_motorization_effort 
+		}
 		x = -1
 		y = 1
-		relative_position_id = aviation_effort_2
+		relative_position_id = emc_aviation_effort_ii
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -528,13 +532,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = rocket_effort
+		id = emc_rocket_effort
 		icon = GFX_focus_rocketry
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = infrastructure_effort }
+		prerequisite = { focus = emc_aviation_effort_ii }
 		x = 0
 		y = 2
-		relative_position_id = aviation_effort_2
+		relative_position_id = emc_aviation_effort_ii
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -568,13 +571,13 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = NAV_effort
+		id = emc_NAV_effort
 		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = aviation_effort_2 }
-		prerequisite = { focus = flexible_navy }
+		prerequisite = { focus = emc_aviation_effort_ii }
+		prerequisite = { focus = emc_flexible_navy }
 		x = 1
 		y = 1
-		relative_position_id = aviation_effort_2
+		relative_position_id = emc_aviation_effort_ii
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -721,10 +724,10 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = flexible_navy
+		id = emc_flexible_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = emc_naval_effort }
-		mutually_exclusive = { focus = large_navy }
+		mutually_exclusive = { focus = emc_large_navy }
 		x = -1
 		y = 1
 		relative_position_id = emc_naval_effort
@@ -763,10 +766,10 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = large_navy
+		id = emc_large_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = emc_naval_effort }
-		mutually_exclusive = { focus = flexible_navy }
+		mutually_exclusive = { focus = emc_flexible_navy }
 		x = 1
 		y = 1
 		relative_position_id = emc_naval_effort
@@ -801,12 +804,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = submarine_effort
+		id = emc_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = flexible_navy focus = large_navy }
+		prerequisite = { focus = emc_flexible_navy focus = emc_large_navy }
 		x = 0
 		y = 1
-		relative_position_id = flexible_navy
+		relative_position_id = emc_flexible_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -839,12 +842,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = cruiser_effort
+		id = emc_cruiser_effort
 		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = large_navy focus = flexible_navy }
+		prerequisite = { focus = emc_large_navy focus = emc_flexible_navy }
 		x = 0
 		y = 1
-		relative_position_id = large_navy
+		relative_position_id = emc_large_navy
 		cost = 10
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -877,12 +880,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = destroyer_effort
+		id = emc_destroyer_effort
 		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = submarine_effort }
+		prerequisite = { focus = emc_submarine_effort }
 		x = 0
 		y = 1
-		relative_position_id = submarine_effort
+		relative_position_id = emc_submarine_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -915,12 +918,12 @@ shared_focus = {
 	}
 
 	shared_focus = {
-		id = capital_ships_effort
+		id = emc_capital_ships_effort
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = cruiser_effort }
+		prerequisite = { focus = emc_cruiser_effort }
 		x = 0
 		y = 1
-		relative_position_id = cruiser_effort
+		relative_position_id = emc_cruiser_effort
 		cost = 10
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }

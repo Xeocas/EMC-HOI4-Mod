@@ -1,0 +1,17 @@
+TEX_wagner = {
+
+	allowed = {
+		tag = TEX
+	}
+	enable = {
+		country_exists = CHA
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = CHA
+		value = 1000
+	}
+}

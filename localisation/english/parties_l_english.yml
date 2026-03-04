@@ -13,6 +13,8 @@
  liberalism_desc:0 "Liberals place a strong emphasis on the importance of liberty and safeguarding the rights of man from tyrannical government. They also believe in government for, and by, the people, who it is ultimately loyal to."
  CAS_democratic_party:0 "Establishment"
  CAS_democratic_party_long:0 "The Establishment"
+ VNC_democratic_party:0 "Merchants Party"
+ VNC_democratic_party_long:0 "The Merchants Party"
 
  social_democrat:0 "Social Democrat"
  social_democrat_noun:0 "Social Democracy"
@@ -25,6 +27,7 @@
  communism_noun:0 "Communism"
  communism_desc:0 "Communist State"
  communist_desc:0 "Communists seek to establish a socialist state following the theories of Karl Marx in order to create a utopia free of capitalist tyranny. However, once in power, all decisions will be made internally through the sole ruling party."
+ SOV_communism_party_russian:0 "Communist Party"
 
  fascism:0 "Fascist"
  fascism_noun:0 "Fascism"

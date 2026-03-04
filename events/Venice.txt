@@ -41,13 +41,18 @@ country_event = {
 		ai_chance = {
 			base = 40
 		}
-		release = ARN
+		SPN = {
+			white_peace = VNC
+			release = ARN
+		}
         ARN = {
 			change_tag_from = SPN 
 		}
-		annex_country = {
+		VNC = {
+			annex_country = {
     		target = SPN
     		transfer_troops = no
+		}
 		}
 		hidden_effect = {
 			news_event = news.456
@@ -111,6 +116,34 @@ country_event = {
 			VNC = {
 				set_country_flag = VNC_war_with_turkey
 			}
+		}
+	}
+}
+
+# Doge is overthrown
+country_event = {
+	id = vnc.4
+	title = vnc.4.t
+	desc = vnc.4.d
+	picture = GFX_report_event_iww_demonstration
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = vnc.4.a
+		ai_chance = {
+			base = 10
+		}
+		
+       set_politics = {
+    		ruling_party = democratic
+    		elections_allowed = yes
+    		last_election = "2024.1.1"
+    		election_frequency = 24
+    		long_name = VNC_democratic_party_long
+    		name = VNC_democratic_party
 		}
 	}
 }

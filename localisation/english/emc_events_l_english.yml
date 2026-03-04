@@ -113,8 +113,6 @@
  ver.2.t:0 "Eastern Seaboard Expansion"
  ver.2.d:0 "Towns as far south as Georgia and even approaching Florida have begun to move to Vermont!"
  ver.2.a:0 "Vermont grows!"
-<<<<<<< Updated upstream
-=======
 
  vnc.1.t:0 "Savoie Offers Annexation"
  vnc.1.d:0 "Our old ally, Savoie, has found itself unable to operate as an independent nation due to recruiting problems and the PR nightmare of its leadership. They have offered to join Venice in exchange for protection."
@@ -133,6 +131,4 @@
  tur.1.a:0 "Ready the army!"
  tur.2.t:0 "Venice Returns Izmir"
  tur.2.d:0 "Venice, in a show of either goodwill or fear, has returned our territory in Izmir and withdrawn from Anatolia!"
- tur.2.a:0 "Glory to Turkey!"
->>>>>>> Stashed changes
- 
+ tur.2.a:0 "Glory to Turkey!" 
