@@ -1,0 +1,590 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_USA_CONGRESS}
+
+focus_tree = {
+	id = ntl_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NTL
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = NTL
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+	# Eco tree
+	focus = {
+		id = NTL_successful_recruiting
+		icon = GFX_focus_generic_population_growth
+		x = 4
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			7 = {
+				add_manpower = 25000
+			}
+		}
+	}
+
+	focus = {
+		id = NTL_development_of_voc_hq
+		icon = GFX_focus_GER_south_east_asian_natural_wealth
+		prerequisite = { focus = NTL_successful_recruiting }
+		x = 0
+		y = 1
+		relative_position_id = NTL_successful_recruiting
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+			country_exists = DEI
+			DEI = {
+				is_subject = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			36 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NTL_advertise_national_mall
+		icon = GFX_focus_generic_economic_recovery
+		prerequisite = { focus = NTL_development_of_voc_hq }
+		x = 0
+		y = 1
+		relative_position_id = NTL_development_of_voc_hq
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			7 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Mil tree
+	focus = {
+		id = NTL_army_reorganization
+		icon = GFX_focus_hol_liberation
+		x = 6
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_tech_bonus = {
+				name = NTL_army_reorganization
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			add_war_support = 0.05
+			army_experience = 10
+			navy_experience = 10
+			air_force_experience = 10
+		}
+	}
+
+	focus = {
+		id = NTL_royal_dutch_cavalry
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = NTL_army_reorganization }
+		x = 0
+		y = 1
+		relative_position_id = NTL_army_reorganization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = NTL_royal_dutch_cavalry
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = NTL_fire_supremacy
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = NTL_royal_dutch_cavalry }
+		x = 0
+		y = 1
+		relative_position_id = NTL_royal_dutch_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = NTL_fire_supremacy
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			army_experience = 15
+		}
+	}
+
+	# Political tree
+	focus = {
+		id = NTL_open_parliament
+		icon = GFX_focus_generic_election
+		x = 8
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = NTL_college_of_imperial_lords
+		icon = GFX_focus_RAJ_protest_against_the_howell_monument
+		prerequisite = { focus = NTL_open_parliament }
+		x = 0
+		y = 1
+		relative_position_id = NTL_open_parliament
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	# Main tree
+	focus = {
+		id = NTL_leader_of_germans
+		icon = GFX_focus_GER_defender_of_democracy
+		prerequisite = { focus = NTL_advertise_national_mall }
+		prerequisite = { focus = NTL_fire_supremacy }
+		x = 1
+		y = 1
+		relative_position_id = NTL_advertise_national_mall
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			56 = {
+				add_core_of = ROOT
+			}
+			59 = {
+				add_core_of = ROOT
+			}
+			61 = {
+				add_core_of = ROOT
+			}
+			58 = {
+				add_core_of = ROOT
+			}
+			57 = {
+				add_core_of = ROOT
+			}
+			51 = {
+				add_core_of = ROOT
+			}
+			42 = {
+				add_core_of = ROOT
+			}
+			55 = {
+				add_core_of = ROOT
+			}
+			54 = {
+				add_core_of = ROOT
+			}
+			978 = {
+				add_core_of = ROOT
+			}
+			50 = {
+				add_core_of = ROOT
+			}
+			52 = {
+				add_core_of = ROOT
+			}
+			53 = {
+				add_core_of = ROOT
+			}
+			60 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = NTL_artifacts_for_rijksmuseum
+		icon = GFX_focus_PER_national_museum
+		prerequisite = { focus = NTL_leader_of_germans }
+		x = 0
+		y = 1
+		relative_position_id = NTL_leader_of_germans
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = 0.05
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = NTL_end_turtle_wars
+		icon = GFX_focus_SWE_refuge_from_war
+		prerequisite = { focus = NTL_artifacts_for_rijksmuseum }
+		x = 0
+		y = 1
+		relative_position_id = NTL_artifacts_for_rijksmuseum
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_STABILITY}
+		completion_reward = {
+			add_stability = 0.1
+			29 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus = {
+		id = NTL_join_ofn
+		icon = GFX_focus_hol_the_fourth_ally
+		prerequisite = { focus = NTL_end_turtle_wars }
+		x = 0
+		y = 1
+		relative_position_id = NTL_end_turtle_wars
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+			CAS = {
+				add_to_faction = NTL
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = NTL_alpine_developments
+		icon = GFX_focus_SWI_the_national_redoubt
+		prerequisite = { focus = NTL_join_ofn }
+		x = 0
+		y = 1
+		relative_position_id = NTL_join_ofn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		allow_branch = {
+		}
+
+		available = {
+			owns_state = 3
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			3 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+}
+

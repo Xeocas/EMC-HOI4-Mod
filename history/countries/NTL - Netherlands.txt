@@ -1,8 +1,8 @@
-﻿capital = 36
+﻿capital = 7
 
 oob = "NTL_1936"
 
-set_research_slots = 2
+set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.5
 add_command_power = 5
@@ -27,6 +27,8 @@ set_technology = {
 
 set_convoys = 10
 
+puppet = DEI
+
 set_politics = {
 	ruling_party = monarchy
 	last_election = "2022.1.1"
@@ -36,6 +38,10 @@ set_politics = {
 set_popularities = {
 	monarchy = 75
 	democratic = 25
+}
+
+add_ideas = {
+	holy_roman_empire
 }
 
 recruit_character = NTL_colt44magnum

@@ -14,5 +14,10 @@ characters={
 			expire="2027.1.1.1"
 			id=-1
 		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="2027.1.1.1"
+			id=-1
+		}
 	}
 }

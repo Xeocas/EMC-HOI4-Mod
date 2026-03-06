@@ -20,6 +20,9 @@
  SPN_surrendered_nation:0 "Surrendered Nation"
  SPN_surrendered_nation_desc:0 "The government of the former Spanish Empire has abandoned the nation, leaving it open to overclaim."
 
+ holy_roman_empire:0 "Holy Roman Empire"
+ holy_roman_empire_desc:0 "As a member of the Holy Roman Empire, this nation upholds its values and tenants."
+
  conservative_democrat_drift:0 "Daily Conservative Democrat Support"
  social_democrat_drift:0 "Daily Social Democrat Support"
  monarchy_drift:0 "Daily Monarchy Support"

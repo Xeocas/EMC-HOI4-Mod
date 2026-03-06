@@ -37,3 +37,7 @@ set_popularities = {
 	neutrality = 85
 	democratic = 15
 }
+
+add_ideas = {
+	holy_roman_empire
+}

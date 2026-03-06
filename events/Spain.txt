@@ -13,7 +13,7 @@ country_event = {
 	trigger = {
 		tag = SPN
 		has_war_with = VNC
-		surrender_progress > 0.3
+		surrender_progress > 0.4
 		has_civil_war = no
 	}
 	mean_time_to_happen = { days = 2 }

@@ -113,7 +113,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.15
@@ -156,8 +156,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = VNC_purchase_sicily
-		icon = GFX_focus_generic_purchase_mechanized_equipment
+		id = VNC_mountain_munition_plants
+		icon = GFX_focus_SMB_mountain_guns
 		prerequisite = { focus = VNC_secure_spain }
 		x = 0
 		y = 1
@@ -166,7 +166,56 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 15
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			39 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = VNC_mountain_munition_plants
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = VNC_purchase_sicily
+		icon = GFX_focus_generic_purchase_mechanized_equipment
+		prerequisite = { focus = VNC_mountain_munition_plants }
+		x = 0
+		y = 1
+		relative_position_id = VNC_mountain_munition_plants
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
 		}
 
 		available = {
@@ -197,7 +246,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -207,7 +256,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}

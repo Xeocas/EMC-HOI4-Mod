@@ -1,0 +1,29 @@
+ideas = {
+
+	country = {
+		holy_roman_empire = {
+			picture = GER_holy_roman_empire_of_the_german_nation
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				monarchy_drift = 0.01
+				opinion_gain_monthly_same_ideology_factor = 0.5
+			}
+		}
+	}
+}

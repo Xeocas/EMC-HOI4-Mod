@@ -1,0 +1,59 @@
+###########################
+# Netherlands Events
+###########################
+
+add_namespace = ntl
+
+# Return of Brussels
+country_event = {
+	id = ntl.1
+	title = ntl.1.t
+	desc = ntl.1.d
+	picture = GFX_report_event_generic_handshake
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ntl.1.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 977 }
+			}
+			transfer_state = 977
+		}
+
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = ntl.2
+	title = ntl.2.t
+	desc = ntl.2.d
+	picture = GFX_report_event_SWI_president_talking_flag
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ntl.2.a
+
+		if = {
+				limit = {
+					FROM = { controls_state = 845 }
+				}
+				transfer_state = 845
+			}
+		if = {
+			limit = {
+				FROM = { controls_state = 3 }
+			}
+			transfer_state = 3
+		}
+	}
+}

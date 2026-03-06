@@ -149,13 +149,17 @@ create_wargoal = {
 set_politics = {
 	ruling_party = monarchy
 	last_election = "2024.1.1"
-	election_frequency = 24
+	election_frequency = 12
 	elections_allowed = yes
 }
 set_popularities = {
 	monarchy = 40
 	fascism = 37
 	democratic = 23
+}
+
+add_ideas = {
+	holy_roman_empire
 }
 
 recruit_character = VNC_greed

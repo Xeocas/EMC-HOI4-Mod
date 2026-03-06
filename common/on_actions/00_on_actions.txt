@@ -77,6 +77,16 @@ on_actions = {
 					days = 90
 				}
 			}
+			NTL = {
+				country_event = {
+					id = ntl.1
+					days = 1450
+				}
+				country_event = {
+					id = ntl.2
+					days = 2000
+				}
+			}
 		}
 		#Setup Colonial Powers
 		effect = {

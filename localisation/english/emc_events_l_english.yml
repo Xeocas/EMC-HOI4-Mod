@@ -27,6 +27,11 @@
  news.455.a:0 "The crisis escalates"
  news.455.b:0 "Texas shall be victorious!"
  news.455.c:0 "Liberty will prevail!"
+ news.456.t:0 "Spain Falls"
+ news.456.d:0 "The once-great Spanish Empire was abandoned by it's King, Huxf, in the face of the overclaim update. Sensing oppurtunity, Venetian forces have successfully conquered nearly the entire nation. Only the town of Aragon remains holding out against the onsalught of invaders."
+ news.456.a:0 "Worrying for Europe"
+ news.456.b:0 "Only the first of our conquests..."
+ news.456.c:0 "Spain will rise from the ashes, someday..."
  
  cas.1.t:0 "Great North Icerail Crisis"
  cas.1.d:0 "Several mayors in the Great North have risen up in opposition to the Icerail Preservation Act proposed by Secretary of Interior Moxie a few days ago. They claim that declaring icerails to be under the sole authority of the Department of Interior is unconstitutional, and a violation of their towns rights. Already, the towns of Sullivan Bay, Husky Valley, and Castle John have disconnected their towns from the icerail system and threatened to expand their resistance to the law."
@@ -125,6 +130,9 @@
  vnc.3.d:0 "Turkey has demanded we transfer them the city of Izmir, which they claim as their core territory. Already, the Turkish hordes are gathering on our border."
  vnc.3.a:0 "If they want war, they may have it"
  vnc.3.b:0 "We have bigger issues than the Turks"
+ vnc.4.t:0 "Overthrow the Doge"
+ vnc.4.d:0 "CorruptedGreed, the Doge of Venice, is surronded on all sides. The merchants, common folk, and armed forces all demand his resignation and that power be returned to the people. Seeing no other option, he admits defeat and surrenders the city."
+ vnc.4.a:0 "The people rule Venice!"
 
  tur.1.t:0 "Venice Refuses in Izmir"
  tur.1.d:0 "The Venetian menace has refused to return our core territory in Izmir! In fact, they've even threatened to overclaim our nation should we attempt to reclaim our land!"
@@ -132,3 +140,10 @@
  tur.2.t:0 "Venice Returns Izmir"
  tur.2.d:0 "Venice, in a show of either goodwill or fear, has returned our territory in Izmir and withdrawn from Anatolia!"
  tur.2.a:0 "Glory to Turkey!" 
+
+ ntl.1.t:0 "Brussels Returned"
+ ntl.1.d:0 "After long negotiations, the holder of Brussels has agreed to return the town to us. For many months, it has been held as part of Aquataine by the enemy in Indonesia, but now, at last, this hold out is dealt with."
+ ntl.1.a:0 "Je Maintiendrai"
+ ntl.2.t:0 "Bern Offers Sale"
+ ntl.2.d:0 "The mayor of Bern has offered to sell us his town. This will provide new oppurtunities for expansion in the Southern Alipne region."
+ ntl.2.a:0 "A worthwhile purchase"
