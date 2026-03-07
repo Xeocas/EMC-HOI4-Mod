@@ -23,6 +23,15 @@ country_event = {
 			target = VNC
 			generator = { 339 }
 		}
+
+		hidden_effect = {
+			GRE = {
+				country_event = {
+					id = gre.1
+					days = 12
+				}
+			}
+		}
 	}
 }
 

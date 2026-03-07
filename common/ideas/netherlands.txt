@@ -21,7 +21,7 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.2
-				monarchy_drift = 0.01
+				monarchy_drift = 0.05
 				opinion_gain_monthly_same_ideology_factor = 0.5
 			}
 		}

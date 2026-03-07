@@ -10,7 +10,7 @@
 shared_focus = {
 		id = emc_army_effort
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 1
+		x = -2
 		y = 0
 		cost = 10
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -283,7 +283,7 @@ shared_focus = {
 	shared_focus = {
 		id = emc_aviation_effort
 		icon = GFX_goal_generic_build_airforce
-		x = 5
+		x = 2
 		y = 0
 		cost = 10
 		
@@ -421,7 +421,7 @@ shared_focus = {
 		prerequisite = { focus = emc_bomber_focus focus = emc_fighter_focus }
 		x = -1
 		y = 1
-		relative_position_id = bomber_focus
+		relative_position_id = emc_bomber_focus
 		cost = 10
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
@@ -598,7 +598,7 @@ shared_focus = {
 	shared_focus = {
 		id = emc_naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 9
+		x = 6
 		y = 0
 		cost = 10
 

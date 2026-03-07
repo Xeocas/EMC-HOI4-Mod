@@ -87,6 +87,12 @@ on_actions = {
 					days = 2000
 				}
 			}
+			BRZ = {
+				country_event = {
+					id = brz.1
+					days = 1
+				}
+			}
 		}
 		#Setup Colonial Powers
 		effect = {

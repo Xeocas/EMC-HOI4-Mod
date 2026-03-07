@@ -1,0 +1,27 @@
+###########################
+# Greece Events
+###########################
+
+add_namespace = GRE
+
+# Join Turko-Venetian War
+country_event = {
+	id = gre.1
+	title = gre.1.t
+	desc = gre.1.d
+	picture = GFX_report_event_gre_city_siege
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = gre.1.a
+        
+		create_war_goal = {
+			type = take_state_focus
+			target = VNC
+			generator = { 805 }
+		}
+	}
+}

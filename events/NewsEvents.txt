@@ -203,3 +203,33 @@ news_event = {
 		trigger = { TAG = ARN }
 	}
 }
+
+# Venice buys Sicily
+news_event = {
+	id = news.457
+	title = news.457.t
+	desc = news.457.d
+	picture = GFX_report_event_ast_navy
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.457.a
+		trigger = {
+			NOT = {
+				TAG = VNC
+				TAG = GOA
+			}
+		}
+	}
+	option = {
+		name = news.457.b
+		trigger = { TAG = VNC }
+	}
+	option = {
+		name = news.457.c
+		trigger = { TAG = GOA }
+	}
+}

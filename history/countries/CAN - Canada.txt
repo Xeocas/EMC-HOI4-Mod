@@ -30,10 +30,10 @@ set_convoys = 10
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1932.11.8"
-	election_frequency = 48
+	election_frequency = 12
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 85
 	democratic = 15
+	neutrality = 85
 }

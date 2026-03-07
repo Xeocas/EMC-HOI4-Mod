@@ -147,3 +147,29 @@ country_event = {
 		}
 	}
 }
+
+# Sicily Purchased
+country_event = {
+	id = vnc.5
+	title = vnc.5.t
+	desc = vnc.5.d
+	picture = GFX_report_event_ast_navy
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = vnc.5.a
+
+		if = {
+			limit = {
+				FROM = { controls_state = 115 }
+			}
+			transfer_state = 115
+		}
+		hidden_effect = {
+			news_event = news.457
+		}
+	}
+}

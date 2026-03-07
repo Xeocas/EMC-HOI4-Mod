@@ -145,6 +145,7 @@ create_wargoal = {
 	type = annex_everything
 	expire = 200
 }
+non_aggression_pact = SAV
 
 set_politics = {
 	ruling_party = monarchy
