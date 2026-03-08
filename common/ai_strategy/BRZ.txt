@@ -1,0 +1,78 @@
+BRZ_befriend_cascadia = {
+
+	allowed = {
+		tag = BRZ
+	}
+	enable = {
+		country_exists = CAS
+		BRZ = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = CAS
+		value = 50
+	}
+}
+
+BRZ_hate_america = {
+	allowed = {
+		tag = BRZ
+	}
+
+	enable = {
+		country_exists = AME
+		BRZ = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = AME
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = AME
+		value = 300
+	}
+	ai_strategy = {
+		type = declare_war
+		id = AME
+		value = 500
+	}
+}
+
+BRZ_befriend_la_plata = {
+
+	allowed = {
+		tag = BRZ
+	}
+	enable = {
+		country_exists = LAP
+		BRZ = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = LAP
+		value = 100
+	}
+}

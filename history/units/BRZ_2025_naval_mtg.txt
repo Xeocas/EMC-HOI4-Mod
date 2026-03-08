@@ -33,8 +33,11 @@ units= {
 			ship = { name = "BRS Europe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
 			ship = { name = "BRS Natal" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
 			ship = { name = "BRS Recife" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BRZ } } }		
-		}			
-		### Destroyer Flotilla 1 ###				
+		}	
+	}
+	fleet = {
+		name = "Caribbean Fleet"			
+		naval_base = 4982 # Guyana
 		task_force = {					
 			name = "Caribbean Flotilla"				
 			location = 4982 # Guyana	

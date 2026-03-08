@@ -35,6 +35,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_greater_italy
 		x = 14
 		y = 0
+		mutually_exclusive = { focus = VNC_la_serenissima }
 
 		cost = 10
 

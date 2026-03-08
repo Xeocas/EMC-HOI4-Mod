@@ -30,10 +30,12 @@ focus_tree = {
 	shared_focus = emc_naval_effort
 	shared_focus = emc_aviation_effort
 
+	## POLITICAL TREE
+	# Historic path
 	focus = {
 		id = BRZ_choosing_a_successor
 		icon = GFX_focus_generic_monarchy_1
-		x = 10
+		x = 15
 		y = 0
 
 		cost = 10
@@ -53,35 +55,726 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
 		completion_reward = {
-			add_war_support = 0.05
+			BRZ = {
+				country_event = {
+					id = brz.2
+					hours = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_olivios_return
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = BRZ_choosing_a_successor }
+		mutually_exclusive = { focus = BRZ_second_artigas_war }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_choosing_a_successor
+
+		cost = 12
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = BRZ_olivios_will_return
+			remove_idea = BRZ_absence_of_olivio
+		}
+	}
+
+	focus = {
+		id = BRZ_reform_the_senate
+		icon = GFX_focus_BRA_new_capital
+		prerequisite = { focus = BRZ_olivios_return }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_olivios_return
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 100
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
+				ideology = democratic
+				popularity = 0.1
 			}
-			create_war_goal = {
+		}
+	}
+
+	focus = {
+		id = BRZ_finish_off_americans
+		icon = GFX_focus_generic_attack_uruguay
+		prerequisite = { focus = BRZ_reform_the_senate }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_reform_the_senate
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_war = no
+			is_subject = no
+			IF = {
+				has_army_manpower = { size > 99999 }
+			}
+		}
+		
+		bypass = {
+			OR = {
+				AME = {
+					exists = no
+				}
+				BRZ = {
+					owns_state = 371
+					owns_state = 945
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_war_support = 0.25
+			create_wargoal = {
 				type = annex_everything
-				target = GOA
+				target = AME
 			}
-			160 = {
-				add_extra_state_shared_building_slots = 4
+			hidden_effect = {
+				BRZ = {
+					country_event = {
+						id = brz.4
+						days = 900
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_brazil_across_three_oceans
+		icon = GFX_focus_BRA_international_crisis
+		prerequisite = { focus = BRZ_finish_off_americans }
+		x = 1
+		y = 1
+		relative_position_id = BRZ_finish_off_americans
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_war = no
+			is_subject = no
+			IF = {
+				has_army_manpower = { size > 149999 }
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_war_support = 0.05
+			add_tech_bonus = {
+				name = BRZ_brazil_across_three_oceans
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GRA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VZL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SUR
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = INC
+				generator = { 947 303 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = VIC
+				generator = { 488 }
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_conference_of_the_americas
+		icon = GFX_focus_BRA_north_and_south_america
+		prerequisite = { focus = BRZ_brazil_across_three_oceans }
+		mutually_exclusive = { focus = BRZ_reaffirm_continental_neutrality }
+		x = -1
+		y = 1
+		relative_position_id = BRZ_brazil_across_three_oceans
+
+		cost = 10
+
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 0.05
+			CAS = {
+				dismantle_faction = yes
+				create_faction = COA
+				add_to_faction = BRZ
+				add_to_faction = VER
+				add_to_faction = USA
+				add_to_faction = MEX
+				add_to_faction = MWU
+				add_diplo_relation = {
+                	country = HAV
+                	relation = guarantee
+					active = yes
+            	}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_reaffirm_continental_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = BRZ_brazil_across_three_oceans }
+		mutually_exclusive = { focus = BRZ_conference_of_the_americas }
+		x = 1
+		y = 1
+		relative_position_id = BRZ_brazil_across_three_oceans
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_stability = 0.05
+			army_experience = 20
+			navy_experience = 10
+			air_force_experience = 10
+			add_tech_bonus = {
+				name = BRZ_reaffirm_continental_neutrality
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+			add_idea = BRZ_continental_neutrality
+		}
+	}
+
+	focus = {
+		id = BRZ_greater_brazilian_state
+		icon = GFX_focus_CHL_a_new_empire_of_brazil
+		prerequisite = { focus = BRZ_reaffirm_continental_neutrality focus = BRZ_conference_of_the_americas }
+		x = -1
+		y = 1
+		relative_position_id = BRZ_reaffirm_continental_neutrality
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL}
+		completion_reward = {
+			add_political_power = 100
+			944 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_negotiate_union_with_la_plata
+		icon = GFX_focus_ARG_south_american_unity
+		prerequisite = { focus = BRZ_greater_brazilian_state }
+		mutually_exclusive = { focus = BRZ_sun_confederation }
+		mutually_exclusive = { focus = BRZ_brazil_first }
+		x = -2
+		y = 1
+		relative_position_id = BRZ_greater_brazilian_state
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_opinion = {
+    			target = LAP
+    			value > 50
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 75
+			annex_country = {
+				target = LAP
+				transfer_troops = yes
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_sun_confederation
+		icon = GFX_focus_CHL_unite_hispanic_america
+		prerequisite = { focus = BRZ_greater_brazilian_state }
+		mutually_exclusive = { focus = BRZ_sun_confederation }
+		mutually_exclusive = { focus = BRZ_negotiate_union_with_la_plata }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_greater_brazilian_state
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_opinion = {
+    			target = PAN
+    			value > 50
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 100
+			annex_country = {
+				target = PAN
+				transfer_troops = yes
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CBA
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_brazil_first
+		icon = GFX_focus_BRA_greater_federalism
+		prerequisite = { focus = BRZ_greater_brazilian_state }
+		mutually_exclusive = { focus = BRZ_sun_confederation }
+		mutually_exclusive = { focus = BRZ_negotiate_union_with_la_plata }
+		x = 2
+		y = 1
+		relative_position_id = BRZ_greater_brazilian_state
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_political_power = 50
+			497 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = arms_factory
-					level = 2
+					type = dockyard
+					level = 1
 					instant_build = yes
 				}
 			}
-			736 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
+		}
+	}
+
+	# Codah path
+	focus = {
+		id = BRZ_second_artigas_war
+		icon = GFX_focus_BRA_utilize_security_law
+		prerequisite = { focus = BRZ_choosing_a_successor }
+		mutually_exclusive = { focus = BRZ_olivios_return }
+		x = -3
+		y = 1
+		relative_position_id = BRZ_choosing_a_successor
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_war = no
+			fascism > 0.5
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_politics = {
+    			ruling_party = fascism
+    			elections_allowed = no
+    			last_election = "2024.1.1"
+    			election_frequency = 12
+			}
+			add_war_support = 0.05
+			start_civil_war = {
+    			ruling_party = fascism
+    			ideology = democratic
+   				size = 0.6
+   				states = {
+    				489 687 969 495 495 938 491 940 494 492 487 942 497 941 937 935 498 936 499 943 500
+    			}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_accept_american_support
+		icon = GFX_focus_CHL_work_on_the_panamerican_highway
+		prerequisite = { focus = BRZ_second_artigas_war }
+		mutually_exclusive = { focus = BRZ_ }
+		x = -1
+		y = 1
+		relative_position_id = BRZ_second_artigas_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = yes
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 20
+			BRZ = {
+				add_manpower = 10000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = AME
 				}
+			}
+			LAP = {
+				declare_war_on = {
+    				target = BRZ
+    				type = puppet
+				}
+				declare_war_on = {
+    				target = AME
+    				type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_accept_american_support
+		icon = GFX_focus_CHL_work_on_the_panamerican_highway
+		prerequisite = { focus = BRZ_second_artigas_war }
+		mutually_exclusive = { focus = BRZ_kickstart_the_war }
+		x = -1
+		y = 1
+		relative_position_id = BRZ_second_artigas_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = yes
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 20
+			BRZ = {
+				add_manpower = 10000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = AME
+				}
+			}
+			LAP = {
+				declare_war_on = {
+    				target = BRZ
+    				type = puppet
+				}
+				declare_war_on = {
+    				target = AME
+    				type = annex_everything
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BRZ_establish_dictatorship
+		icon = GFX_focus_BRA_third_republic
+		prerequisite = { focus = BRZ_accept_american_support }
+		x = -1
+		y = 1
+		relative_position_id = BRZ_accept_american_support
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = no
+			has_government = fascism
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+
+	focus = {
+		id = BRZ_olivio_forgotten
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = BRZ_establish_dictatorship }
+		x = 0
+		y = 1
+		relative_position_id = BRZ_establish_dictatorship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = no
+			has_government = fascism
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 200
+			remove_idea = BRZ_absence_of_olivio
+		}
+	}
+
+	focus = {
+		id = BRZ_kickstart_the_war
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = BRZ_second_artigas_war }
+		mutually_exclusive = { focus = BRZ_accept_american_support }
+		x = 1
+		y = 1
+		relative_position_id = BRZ_second_artigas_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_civil_war = yes
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			army_experience = 10
+			add_idea = BRZ_fighting_america
+			create_wargoal = {
+				type = annex_country
+				target = AME
+			}
+			create_unit = {
+    			division = {
+					name = "Infantry Division" 
+					division_template = "Infantry Division" 
+					start_experience_factor = 0.5
+				}
+				prioritize_location = 10405
+    			owner = BRZ
+			}
+			create_unit = {
+    			division = {
+					name = "Infantry Division" 
+					division_template = "Infantry Division" 
+					start_experience_factor = 0.5
+				}
+				prioritize_location = 4548
+    			owner = BRZ
+			}
+			create_unit = {
+    			division = {
+					name = "Infantry Division" 
+					division_template = "Infantry Division" 
+					start_experience_factor = 0.5
+				}
+				prioritize_location = 7594
+    			owner = BRZ
+			}
+			create_unit = {
+    			division = {
+					name = "Infantry Division" 
+					division_template = "Infantry Division" 
+					start_experience_factor = 0.5
+				}
+				prioritize_location = 5110
+    			owner = BRZ
 			}
 		}
 	}

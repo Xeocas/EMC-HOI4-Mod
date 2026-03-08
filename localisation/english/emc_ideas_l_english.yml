@@ -23,6 +23,13 @@
  holy_roman_empire:0 "Holy Roman Empire"
  holy_roman_empire_desc:0 "As a member of the Holy Roman Empire, this nation upholds its values and tenants."
 
+ BRZ_absence_of_olivio:0 "Absence of Olivio"
+ BRZ_rise_of_codah:0 "Return of Codah"
+ BRZ_crown_council:0 "Legacy of the Crown Council"
+ BRZ_copom:0 "Rise of COPOM"
+ BRZ_continental_neutrality:0 "Continental Neutrality"
+ BRZ_fighting_america:0 "Fighting America"
+
  conservative_democrat_drift:0 "Daily Conservative Democrat Support"
  social_democrat_drift:0 "Daily Social Democrat Support"
  monarchy_drift:0 "Daily Monarchy Support"

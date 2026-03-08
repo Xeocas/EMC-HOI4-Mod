@@ -1,0 +1,63 @@
+AME_hate_brazil = {
+	allowed = {
+		tag = AME
+	}
+
+	enable = {
+		country_exists = BRZ
+		BRZ = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = BRZ
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BRZ
+		value = 400
+	}
+	ai_strategy = {
+		type = declare_war
+		id = BRZ
+		value = 500
+	}
+}
+
+AME_support_fascist_brazil = {
+	allowed = {
+		tag = AME
+	}
+
+	enable = {
+		country_exists = BRZ
+		BRZ = {
+			has_government = fascism
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = BRZ
+		value = 200
+	}
+	ai_strategy = {
+    	type = support
+    	id = BRZ
+    	value = 300
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = LAP
+		value = 300
+	}
+}
